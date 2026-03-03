@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manoj Kirana Store – Grocery Store in Gungunia</title>
+<meta name="description" content="Manoj Kirana Store – Your trusted local grocery store in Gungunia, Odisha since 2013. Fresh groceries, daily essentials & wholesale available. Call 7873618898.">
+<meta name="keywords" content="kirana store gungunia, grocery store odisha, manoj kirana store, wholesale grocery gungunia odisha 766017">
+<meta name="author" content="Manoj Kirana Store">
+<meta property="og:title" content="Manoj Kirana Store – Grocery Store in Gungunia">
+<meta property="og:description" content="Your trusted local grocery store in Gungunia, Odisha since 2013. Open daily 8AM–8PM.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#2d8a4e;--gd:#1e6b3c;--gl:#e8f5ed;
+  --acc:#f5a623;--w:#fff;
+  --c100:#f8f9fa;--c200:#e9ecef;--c600:#6c757d;--c800:#343a40;
+  --txt:#1a2e1a;--sh:0 2px 15px rgba(0,0,0,.08);
+  --r:12px;--tr:.25s ease;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Noto Sans Oriya',sans-serif;color:var(--txt);background:var(--w);overflow-x:hidden}
+body.lang-or{font-family:'Noto Sans Oriya','Poppins',sans-serif}
+
+/* Lang toggle */
+[data-l="or"]{display:none}
+body.lang-or [data-l="en"]{display:none}
+body.lang-or [data-l="or"]{display:block}
+span[data-l="or"]{display:none}
+body.lang-or span[data-l="en"]{display:none}
+body.lang-or span[data-l="or"]{display:inline}
+
+/* Lang bar */
+.lbar{background:var(--gd);padding:6px 16px;display:flex;justify-content:flex-end;align-items:center}
+.ltog{display:flex;background:rgba(255,255,255,.15);border-radius:20px;overflow:hidden}
+.lbtn{padding:4px 14px;border:none;background:transparent;color:rgba(255,255,255,.8);font-size:12px;font-weight:500;cursor:pointer;transition:var(--tr);font-family:inherit}
+.lbtn.active{background:var(--w);color:var(--gd);font-weight:700}
+
+/* Navbar */
+.nav{position:sticky;top:0;background:var(--w);box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
+.nbrand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nlogo{width:42px;height:42px;background:linear-gradient(135deg,var(--g),var(--gd));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.ntitle{font-size:15px;font-weight:700;color:var(--gd);line-height:1.2}
+.nsub{font-size:10px;color:var(--c600);font-weight:400}
+.nlinks{display:none}
+.hbg{background:none;border:none;cursor:pointer;padding:4px;display:flex;flex-direction:column;gap:5px}
+.hbg span{display:block;width:24px;height:2px;background:var(--g);border-radius:2px;transition:var(--tr)}
+
+/* Mobile menu */
+.mm{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:2000}
+.mm.open{display:block}
+.mmi{background:var(--w);width:75%;max-width:300px;height:100%;padding:24px 20px;overflow-y:auto}
+.mcl{background:none;border:none;font-size:24px;cursor:pointer;color:var(--c800);margin-bottom:24px;display:block}
+.mm a{display:flex;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--c200);text-decoration:none;color:var(--txt);font-size:15px;font-weight:500}
+.mm a:last-child{border-bottom:none}
+.mm-icon{font-size:18px}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--g) 0%,var(--gd) 100%);padding:48px 20px 56px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-15%;width:380px;height:380px;background:rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-25%;left:-10%;width:280px;height:280px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
+.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.18);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;margin-bottom:16px;position:relative}
+.hero h1{font-size:clamp(21px,5.5vw,38px);font-weight:700;color:var(--w);line-height:1.3;margin-bottom:16px;position:relative}
+.hsub{color:rgba(255,255,255,.85);font-size:13px;margin-bottom:32px;line-height:2;position:relative}
+.hbtns{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto;position:relative}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:var(--tr);font-family:inherit;min-height:50px}
+.btn-w{background:var(--w);color:var(--gd)}
+.btn-w:hover{background:var(--c100);transform:translateY(-1px)}
+.btn-wa{background:#25D366;color:#fff}
+.btn-wa:hover{background:#1da851;transform:translateY(-1px)}
+.btn-ol{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
+.btn-ol:hover{border-color:#fff;transform:translateY(-1px)}
+.hstats{display:flex;justify-content:center;gap:28px;margin-top:40px;position:relative}
+.stat-n{font-size:22px;font-weight:700;color:#fff}
+.stat-l{font-size:11px;color:rgba(255,255,255,.75)}
+
+/* Sections */
+section{padding:48px 20px}
+.container{max-width:1100px;margin:0 auto}
+.stag{display:inline-block;background:var(--gl);color:var(--g);padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.stitle{font-size:clamp(20px,5vw,28px);font-weight:700;color:var(--txt);margin-bottom:8px;line-height:1.3}
+.sdesc{color:var(--c600);font-size:14px;line-height:1.7;max-width:520px}
+.div{width:48px;height:3px;background:var(--g);border-radius:2px;margin:10px 0 20px}
+
+/* About */
+.about{background:var(--c100)}
+.acontent{display:flex;flex-direction:column;gap:20px}
+.acard{background:var(--w);padding:24px;border-radius:var(--r);box-shadow:var(--sh)}
+.acard p{font-size:14px;line-height:1.85;color:var(--c600)}
+.acard p strong{color:var(--txt)}
+.afeats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.afeat{background:var(--w);padding:16px;border-radius:var(--r);box-shadow:var(--sh);display:flex;align-items:center;gap:10px}
+.afi{font-size:22px;flex-shrink:0}
+.aft{font-size:12px;font-weight:600;color:var(--txt)}
+
+/* Products */
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+.pc{background:var(--w);border:2px solid var(--c200);border-radius:var(--r);padding:22px 16px;text-align:center;transition:var(--tr)}
+.pc:hover{border-color:var(--g);box-shadow:0 4px 20px rgba(45,138,78,.12);transform:translateY(-2px)}
+.pi{font-size:34px;margin-bottom:10px;display:block}
+.pn{font-size:12px;font-weight:600;color:var(--txt);line-height:1.4}
+.pc-hl{border-color:var(--g)!important;background:var(--gl)!important}
+.pc-hl .pn{color:var(--g)}
+
+/* Why */
+.why{background:var(--g)}
+.why .stag{background:rgba(255,255,255,.18);color:#fff}
+.why .stitle{color:#fff}
+.why .sdesc{color:rgba(255,255,255,.8)}
+.why .div{background:rgba(255,255,255,.35)}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
+.wc{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:22px 16px;text-align:center;transition:var(--tr)}
+.wc:hover{background:rgba(255,255,255,.18)}
+.wi{font-size:30px;margin-bottom:8px}
+.wt{font-size:13px;font-weight:600;color:#fff;line-height:1.4}
+
+/* Reviews */
+.reviews{background:var(--c100)}
+.rdisp{display:flex;align-items:center;gap:14px;margin:16px 0 24px}
+.rnum{font-size:52px;font-weight:700;color:var(--g);line-height:1}
+.stars{display:flex;gap:3px}
+.star{color:var(--acc);font-size:18px}
+.rcnt{font-size:12px;color:var(--c600);margin-top:3px}
+.rc{background:var(--w);border-radius:var(--r);padding:20px;box-shadow:var(--sh);margin-top:14px}
+.rh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.rav{width:44px;height:44px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--g);flex-shrink:0}
+.rn{font-size:14px;font-weight:600;color:var(--txt)}
+.rd{font-size:11px;color:var(--c600)}
+.rt{font-size:14px;color:var(--c600);line-height:1.65;font-style:italic}
+.gbadge{display:inline-flex;align-items:center;gap:6px;background:var(--w);border:1px solid var(--c200);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;color:var(--c800);text-decoration:none;margin-top:18px}
+
+/* Contact */
+.cgrid{display:flex;flex-direction:column;gap:16px;margin-top:24px}
+.ccard{background:var(--c100);border-radius:var(--r);padding:4px 20px 8px}
+.ci{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--c200)}
+.ci:last-child{border-bottom:none}
+.cicon{width:40px;height:40px;background:var(--gl);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:2px}
+.clbl{font-size:10px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.cval{font-size:14px;color:var(--txt);font-weight:500;line-height:1.5}
+.clink{color:var(--g);text-decoration:none;font-weight:600}
+.mapbox{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-top:16px}
+.mapbox iframe{width:100%;height:260px;border:none;display:block}
+.cbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.cbtns .btn{flex:1;min-width:130px}
+.btn-g{background:var(--g);color:#fff}
+.btn-g:hover{background:var(--gd)}
+.btn-dir{border:2px solid var(--g);color:var(--g);background:transparent}
+.btn-dir:hover{background:var(--gl)}
+
+/* Footer */
+footer{background:var(--gd);padding:36px 20px;text-align:center}
+.flogo{font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
+.ftag{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:2px}
+.fdiv{width:40px;height:2px;background:rgba(255,255,255,.2);margin:14px auto}
+.fcopy{font-size:11px;color:rgba(255,255,255,.45)}
+
+/* WhatsApp float */
+.wafloat{position:fixed;bottom:24px;right:20px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.45);z-index:999;transition:var(--tr);animation:wapulse 2.5s infinite}
+.wafloat:hover{transform:scale(1.1)}
+@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,.75)}}
+
+/* Open badge */
+.openbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.18);color:#fff;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;margin-left:8px}
+.dot{width:7px;height:7px;background:#7fff7f;border-radius:50%;animation:blink 1.6s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* Responsive */
+@media(min-width:580px){
+  .hbtns{flex-direction:row;flex-wrap:wrap;justify-content:center;max-width:100%}
+  .pgrid{grid-template-columns:repeat(3,1fr)}
+  .wgrid{grid-template-columns:repeat(3,1fr)}
+  .afeats{grid-template-columns:repeat(4,1fr)}
+}
+@media(min-width:900px){
+  .hbg{display:none}
+  .nlinks{display:flex;align-items:center;gap:4px}
+  .nlinks a{padding:8px 13px;text-decoration:none;color:var(--txt);font-size:13px;font-weight:500;border-radius:8px;transition:var(--tr)}
+  .nlinks a:hover{background:var(--gl);color:var(--g)}
+  .nlinks .ncta{background:var(--g);color:#fff}
+  .nlinks .ncta:hover{background:var(--gd);color:#fff}
+  section{padding:72px 40px}
+  .hero{padding:80px 40px 90px}
+  .pgrid{grid-template-columns:repeat(4,1fr)}
+  .wgrid{grid-template-columns:repeat(3,1fr)}
+  .cgrid{flex-direction:row;align-items:flex-start}
+  .ccard{flex:1}
+  .mapbox{flex:1.1;margin-top:0}
+  .acontent{flex-direction:row;align-items:flex-start}
+  .acard{flex:1.2}
+  .afeats{flex:1;grid-template-columns:1fr 1fr}
+  .mapbox iframe{height:320px}
+}
+@media(min-width:1200px){
+  section{padding:80px 80px}
+  .hero{padding:96px 80px 108px}
+}
+</style>
+</head>
+<body>
+
+<!-- Language Bar -->
+<div class="lbar">
+  <div class="ltog">
+    <button class="lbtn active" id="ben" onclick="setLang('en')">English</button>
+    <button class="lbtn" id="bor" onclick="setLang('or')">ଓଡ଼ିଆ</button>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="nav">
+  <a href="#" class="nbrand">
+    <div class="nlogo">🛒</div>
+    <div>
+      <div class="ntitle"><span data-l="en">Manoj Kirana Store</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋର</span></div>
+      <div class="nsub"><span data-l="en">Gungunia, Odisha</span><span data-l="or">ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା</span></div>
+    </div>
+  </a>
+  <div class="nlinks">
+    <a href="#about"><span data-l="en">About</span><span data-l="or">ବିଷୟରେ</span></a>
+    <a href="#products"><span data-l="en">Products</span><span data-l="or">ସାମଗ୍ରୀ</span></a>
+    <a href="#why-us"><span data-l="en">Why Us</span><span data-l="or">ଆମ ବିଶେଷତ୍ୱ</span></a>
+    <a href="#contact"><span data-l="en">Contact</span><span data-l="or">ଯୋଗାଯୋଗ</span></a>
+    <a href="tel:7873618898" class="ncta">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ</span></a>
+  </div>
+  <button class="hbg" id="hbg" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mm" id="mm">
+  <div class="mmi">
+    <button class="mcl" id="mcl">✕</button>
+    <a href="#about" onclick="cmm()"><span class="mm-icon">ℹ️</span><span data-l="en">About Us</span><span data-l="or">ଆମ ବିଷୟରେ</span></a>
+    <a href="#products" onclick="cmm()"><span class="mm-icon">🛒</span><span data-l="en">Products</span><span data-l="or">ସାମଗ୍ରୀ</span></a>
+    <a href="#why-us" onclick="cmm()"><span class="mm-icon">⭐</span><span data-l="en">Why Choose Us</span><span data-l="or">ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ</span></a>
+    <a href="#reviews" onclick="cmm()"><span class="mm-icon">💬</span><span data-l="en">Reviews</span><span data-l="or">ସମୀକ୍ଷା</span></a>
+    <a href="#contact" onclick="cmm()"><span class="mm-icon">📍</span><span data-l="en">Contact & Map</span><span data-l="or">ଯୋଗାଯୋଗ ଓ ମ୍ୟାପ</span></a>
+    <a href="tel:7873618898" style="color:var(--g)"><span class="mm-icon">📞</span>7873618898</a>
+    <a href="https://wa.me/917873618898" target="_blank" style="color:#25D366"><span class="mm-icon">💬</span>WhatsApp</a>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hbadge">
+      ⭐ <span data-l="en">5.0 Rating on Google</span><span data-l="or">ଗୁଗଲ ରେ ୫.୦ ରେଟିଂ</span>
+      <span class="openbadge"><span class="dot"></span><span data-l="en">Open Now</span><span data-l="or">ଖୋଲା ଅଛି</span></span>
+    </div>
+    <h1>
+      <span data-l="en">Your Trusted Grocery Store<br>in Gungunia Since 2013</span>
+      <span data-l="or">୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆର<br>ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ</span>
+    </h1>
+    <p class="hsub">
+      <span data-l="en">🌾 Fresh Groceries &nbsp;•&nbsp; 🏠 Daily Essentials &nbsp;•&nbsp; 📦 Wholesale Available &nbsp;•&nbsp; 😊 Friendly Service</span>
+      <span data-l="or">🌾 ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ &nbsp;•&nbsp; 🏠 ଦୈନନ୍ଦିନ ଜରୁରୀ &nbsp;•&nbsp; 📦 ଥୋକ ଉପଲବ୍ଧ &nbsp;•&nbsp; 😊 ଆନ୍ତରିକ ସେବା</span>
+    </p>
+    <div class="hbtns">
+      <a href="tel:7873618898" class="btn btn-w">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ କରନ୍ତୁ</span></a>
+      <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-wa">💬 <span data-l="en">WhatsApp Order</span><span data-l="or">ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର</span></a>
+      <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" class="btn btn-ol">📍 <span data-l="en">Get Directions</span><span data-l="or">ଦିଗ ଖୋଜନ୍ତୁ</span></a>
+    </div>
+    <div class="hstats">
+      <div><div class="stat-n">11+</div><div class="stat-l"><span data-l="en">Years Serving</span><span data-l="or">ବର୍ଷ ସେବା</span></div></div>
+      <div><div class="stat-n">5.0 ⭐</div><div class="stat-l"><span data-l="en">Google Rating</span><span data-l="or">ଗୁଗଲ ରେଟିଂ</span></div></div>
+      <div><div class="stat-n">8AM–8PM</div><div class="stat-l"><span data-l="en">Daily Open</span><span data-l="or">ସବୁଦିନ ଖୋଲା</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container">
+    <span class="stag"><span data-l="en">Our Story</span><span data-l="or">ଆମ କଥା</span></span>
+    <h2 class="stitle"><span data-l="en">A Trusted Name in Gungunia</span><span data-l="or">ଗୁଙ୍ଗୁନିଆର ଏକ ବିଶ୍ୱସ୍ତ ନାମ</span></h2>
+    <div class="div"></div>
+    <div class="acontent">
+      <div class="acard">
+        <p data-l="en">Since 2013, <strong>Manoj Kirana Store</strong> has been the heartbeat of Gungunia's daily life. Owner <strong>Manoj Mund</strong> started this humble shop with a simple promise — fresh groceries, everyday essentials, and honest service to every family in our community.<br><br>What began as a small kirana has grown into a trusted local institution. Whether you need rice for dinner, oil for cooking, or supplies in bulk — we are here for you, open every day from <strong>8 AM to 8 PM</strong>.<br><br>We also serve <strong>wholesale buyers</strong>, making us the go-to store for both families and small businesses in the area.</p>
+        <p data-l="or">୨୦୧୩ ଠାରୁ, <strong>ମନୋଜ କିରାଣା ଷ୍ଟୋର</strong> ଗୁଙ୍ଗୁନିଆର ଦୈନନ୍ଦିନ ଜୀବନର ଏକ ଅଂଶ ହୋଇ ଆସୁଛି। ମାଲିକ <strong>ମନୋଜ ମୁଣ୍ଡ</strong> ଏକ ସରଳ ପ୍ରତିଶ୍ରୁତି ସହ ଏହି ଦୋକାନ ଆରମ୍ଭ କଲେ — ସୁଲଭ ମୂଲ୍ୟରେ ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ ଓ ଆନ୍ତରିକ ସେବା।<br><br>ଛୋଟ ଏକ କିରାଣା ଦୋକାନ ଭାବରେ ଆରମ୍ଭ ହୋଇ ଏହା ଆଜି ଏକ ବିଶ୍ୱସ୍ତ ସ୍ଥାନ ହୋଇଛି। ଆପଣ ଚାଉଳ, ତେଲ, ବା ଥୋକ ସାମଗ୍ରୀ — ଯାହା ହେଉ, ଆମେ ସବୁଦିନ <strong>ସକାଳ ୮ ଟାରୁ ରାତ୍ରି ୮ ଟା</strong> ଯାଏ ଖୋଲା ଅଛୁ।</p>
+      </div>
+      <div class="afeats">
+        <div class="afeat"><span class="afi">🏪</span><span class="aft"><span data-l="en">Est. 2013</span><span data-l="or">ପ୍ରତିଷ୍ଠା ୨୦୧୩</span></span></div>
+        <div class="afeat"><span class="afi">👨‍👩‍👧</span><span class="aft"><span data-l="en">Family Run</span><span data-l="or">ପାରିବାରିକ ଦୋକାନ</span></span></div>
+        <div class="afeat"><span class="afi">📦</span><span class="aft"><span data-l="en">Wholesale</span><span data-l="or">ଥୋକ ଉପଲବ୍ଧ</span></span></div>
+        <div class="afeat"><span class="afi">🕗</span><span class="aft"><span data-l="en">Open Daily</span><span data-l="or">ସବୁଦିନ ଖୋଲା</span></span></div>
+        <div class="afeat"><span class="afi">💰</span><span class="aft"><span data-l="en">Best Prices</span><span data-l="or">ଉଚିତ ଦାମ</span></span></div>
+        <div class="afeat"><span class="afi">⭐</span><span class="aft"><span data-l="en">5.0 Rating</span><span data-l="or">୫.୦ ରେଟିଂ</span></span></div>
+        <div class="afeat"><span class="afi">🤝</span><span class="aft"><span data-l="en">Trusted</span><span data-l="or">ବିଶ୍ୱସ୍ତ</span></span></div>
+        <div class="afeat"><span class="afi">🌾</span><span class="aft"><span data-l="en">Fresh Stock</span><span data-l="or">ସତେଜ ଜିନିଷ</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products -->
+<section id="products">
+  <div class="container">
+    <span class="stag"><span data-l="en">What We Offer</span><span data-l="or">ଆମ ସାମଗ୍ରୀ</span></span>
+    <h2 class="stitle"><span data-l="en">Our Product Categories</span><span data-l="or">ଆମ ଉତ୍ପାଦ ବିଭାଗ</span></h2>
+    <div class="div"></div>
+    <p class="sdesc"><span data-l="en">Everything your household needs — fresh, affordable, and always in stock.</span><span data-l="or">ଆପଣଙ୍କ ଘର ପାଇଁ ସବୁ ଜିନିଷ — ସତେଜ, ସସ୍ତା ଓ ସବୁବେଳେ ଉପଲବ୍ଧ।</span></p>
+    <div class="pgrid">
+      <div class="pc"><span class="pi">🌾</span><div class="pn"><span data-l="en">Rice & Atta</span><span data-l="or">ଚାଉଳ ଓ ଆଟା</span></div></div>
+      <div class="pc"><span class="pi">🫘</span><div class="pn"><span data-l="en">Pulses & Grains</span><span data-l="or">ଡାଲି ଓ ଶସ୍ୟ</span></div></div>
+      <div class="pc"><span class="pi">🫙</span><div class="pn"><span data-l="en">Cooking Oils</span><span data-l="or">ରୋଷେଇ ତେଲ</span></div></div>
+      <div class="pc"><span class="pi">🍿</span><div class="pn"><span data-l="en">Snacks & Biscuits</span><span data-l="or">ସ୍ନାକ୍ସ ଓ ବିସ୍କୁଟ</span></div></div>
+      <div class="pc"><span class="pi">☕</span><div class="pn"><span data-l="en">Beverages</span><span data-l="or">ପାନୀୟ</span></div></div>
+      <div class="pc"><span class="pi">🧼</span><div class="pn"><span data-l="en">Soaps & Household</span><span data-l="or">ସାବୁନ ଓ ଘରୋଇ ସାମଗ୍ରୀ</span></div></div>
+      <div class="pc"><span class="pi">🛒</span><div class="pn"><span data-l="en">General Daily Items</span><span data-l="or">ଦୈନନ୍ଦିନ ଜିନିଷ</span></div></div>
+      <div class="pc pc-hl"><span class="pi">📦</span><div class="pn"><span data-l="en">Wholesale Grocery</span><span data-l="or">ଥୋକ ଖାଦ୍ୟ ସାମଗ୍ରୀ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why" id="why-us">
+  <div class="container">
+    <span class="stag"><span data-l="en">Why Choose Us</span><span data-l="or">ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ</span></span>
+    <h2 class="stitle"><span data-l="en">The Manoj Kirana Difference</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋରର ବିଶେଷତ୍ୱ</span></h2>
+    <div class="div"></div>
+    <div class="wgrid">
+      <div class="wc"><div class="wi">🏆</div><div class="wt"><span data-l="en">Serving Since 2013</span><span data-l="or">୨୦୧୩ ଠାରୁ ସେବା</span></div></div>
+      <div class="wc"><div class="wi">⭐</div><div class="wt"><span data-l="en">5.0 Google Rating</span><span data-l="or">ଗୁଗଲ ୫.୦ ରେଟିଂ</span></div></div>
+      <div class="wc"><div class="wi">💰</div><div class="wt"><span data-l="en">Affordable Prices</span><span data-l="or">ସସ୍ତା ଓ ଉଚିତ ଦାମ</span></div></div>
+      <div class="wc"><div class="wi">🤝</div><div class="wt"><span data-l="en">Trusted Local Shop</span><span data-l="or">ବିଶ୍ୱସ୍ତ ସ୍ଥାନୀୟ ଦୋକାନ</span></div></div>
+      <div class="wc"><div class="wi">🕗</div><div class="wt"><span data-l="en">Open Daily 8 AM – 8 PM</span><span data-l="or">ସବୁଦିନ ସକାଳ ୮ – ରାତ୍ରି ୮</span></div></div>
+      <div class="wc"><div class="wi">📦</div><div class="wt"><span data-l="en">Wholesale Available</span><span data-l="or">ଥୋକ ଉପଲବ୍ଧ</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <span class="stag"><span data-l="en">Customer Reviews</span><span data-l="or">ଗ୍ରାହକ ସମୀକ୍ଷା</span></span>
+    <h2 class="stitle"><span data-l="en">What Our Customers Say</span><span data-l="or">ଆମ ଗ୍ରାହକ କ'ଣ କହୁଛନ୍ତି</span></h2>
+    <div class="div"></div>
+    <div class="rdisp">
+      <div class="rnum">5.0</div>
+      <div>
+        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+        <div class="rcnt"><span data-l="en">Based on 7 Google Reviews</span><span data-l="or">7 ଗୁଗଲ ସମୀକ୍ଷା ଉପରେ ଆଧାରିତ</span></div>
+      </div>
+    </div>
+    <div class="rc">
+      <div class="rh">
+        <div class="rav">G</div>
+        <div>
+          <div class="rn"><span data-l="en">Google Reviewer</span><span data-l="or">ଗୁଗଲ ସମୀକ୍ଷକ</span></div>
+          <div class="stars" style="gap:2px"><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span></div>
+          <div class="rd"><span data-l="en">Verified Google Review</span><span data-l="or">ଯାଞ୍ଚ ହୋଇଥିବା ଗୁଗଲ ସମୀକ୍ଷା</span></div>
+        </div>
+      </div>
+      <p class="rt"><span data-l="en">"Very good so nice. All grocery are available here."</span><span data-l="or">"ବହୁତ ଭଲ। ଏଠି ସବୁ ପ୍ରକାର ଖାଦ୍ୟ ସାମଗ୍ରୀ ମିଳୁଛି।"</span></p>
+    </div>
+    <div class="rc">
+      <div class="rh">
+        <div class="rav" style="background:#fff3e0;color:var(--acc)">L</div>
+        <div>
+          <div class="rn"><span data-l="en">Local Customer</span><span data-l="or">ସ୍ଥାନୀୟ ଗ୍ରାହକ</span></div>
+          <div class="stars" style="gap:2px"><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span></div>
+        </div>
+      </div>
+      <p class="rt"><span data-l="en">"Manoj bhai always has everything we need. Fair prices and very helpful service!"</span><span data-l="or">"ମନୋଜ ଭାଇ ପାଖରେ ସବୁ ଜିନିଷ ମିଳୁଛି। ଉଚିତ ଦାମ ଓ ଆନ୍ତରିକ ସେବା!"</span></p>
+    </div>
+    <div style="text-align:center">
+      <a href="https://maps.google.com/?q=Manoj+Kirana+Store+Gungunia+Odisha" target="_blank" class="gbadge">🌐 <span data-l="en">View on Google Maps</span><span data-l="or">ଗୁଗଲ ମ୍ୟାପ ରେ ଦେଖନ୍ତୁ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <span class="stag"><span data-l="en">Find Us</span><span data-l="or">ଆମକୁ ଖୋଜନ୍ତୁ</span></span>
+    <h2 class="stitle"><span data-l="en">Contact & Location</span><span data-l="or">ଯୋଗାଯୋଗ ଓ ଅବସ୍ଥାନ</span></h2>
+    <div class="div"></div>
+    <div class="cgrid">
+      <div class="ccard">
+        <div class="ci">
+          <div class="cicon">📍</div>
+          <div><div class="clbl"><span data-l="en">Address</span><span data-l="or">ଠିକଣା</span></div><div class="cval">JRF3+WHX, Gungunia,<br>Odisha 766017</div></div>
+        </div>
+        <div class="ci">
+          <div class="cicon">📞</div>
+          <div>
+            <div class="clbl"><span data-l="en">Phone</span><span data-l="or">ଫୋନ</span></div>
+            <div class="cval"><a href="tel:7873618898" class="clink">7873618898</a><br><a href="tel:7978567667" class="clink" style="color:var(--c600);font-size:13px">7978567667</a></div>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="cicon">💬</div>
+          <div><div class="clbl">WhatsApp</div><div class="cval"><a href="https://wa.me/917873618898" target="_blank" class="clink">7873618898</a></div></div>
+        </div>
+        <div class="ci">
+          <div class="cicon">🕗</div>
+          <div>
+            <div class="clbl"><span data-l="en">Business Hours</span><span data-l="or">ଦୋକାନ ସମୟ</span></div>
+            <div class="cval"><span data-l="en">Monday – Sunday<br><strong>8:00 AM – 8:00 PM</strong></span><span data-l="or">ସୋମ – ରବିବାର<br><strong>ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦</strong></span></div>
+          </div>
+        </div>
+        <div class="ci">
+          <div class="cicon">🏪</div>
+          <div><div class="clbl"><span data-l="en">Category</span><span data-l="or">ଶ୍ରେଣୀ</span></div><div class="cval"><span data-l="en">Indian Grocery Store<br>Wholesale Available</span><span data-l="or">ଭାରତୀୟ ଖାଦ୍ୟ ଦୋକାନ<br>ଥୋକ ବ୍ୟବସ୍ଥା ଉପଲବ୍ଧ</span></div></div>
+        </div>
+      </div>
+      <div class="mapbox">
+        <iframe src="https://maps.google.com/maps?q=Gungunia+Odisha+766017&output=embed&z=14" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Manoj Kirana Store Location Map"></iframe>
+      </div>
+    </div>
+    <div class="cbtns">
+      <a href="tel:7873618898" class="btn btn-g">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ</span></a>
+      <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-wa">💬 <span data-l="en">WhatsApp</span><span data-l="or">ହ୍ୱାଟସ୍‌ଆପ</span></a>
+      <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" class="btn btn-dir">📍 <span data-l="en">Directions</span><span data-l="or">ଦିଗ ଦର୍ଶନ</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="flogo">🛒 <span data-l="en">Manoj Kirana Store</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋର</span></div>
+    <div class="ftag"><span data-l="en">Serving Gungunia Since 2013</span><span data-l="or">୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆ ସେବାରେ</span></div>
+    <div class="ftag"><span data-l="en">Open Daily: 8:00 AM – 8:00 PM</span><span data-l="or">ସବୁଦିନ ଖୋଲା: ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦</span></div>
+    <div class="fdiv"></div>
+    <div class="ftag" style="font-size:12px">📍 <span data-l="en">JRF3+WHX, Gungunia, Odisha 766017</span><span data-l="or">JRF3+WHX, ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା ୭୬୬୦୧୭</span></div>
+    <div class="fdiv"></div>
+    <div class="fcopy"><span data-l="en">© 2026 Manoj Kirana Store. All Rights Reserved.</span><span data-l="or">© ୨୦୨୬ ମନୋଜ କିରାଣା ଷ୍ଟୋର। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।</span></div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="wafloat" aria-label="Chat on WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 32 32" fill="white"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+</a>
+
+<script>
+function setLang(l){
+  const b=document.body,en=document.getElementById('ben'),or=document.getElementById('bor');
+  if(l==='or'){
+    b.classList.add('lang-or');b.setAttribute('lang','or');
+    en.classList.remove('active');or.classList.add('active');
+    document.title='ମନୋଜ କିରାଣା ଷ୍ଟୋର – ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା';
+  } else {
+    b.classList.remove('lang-or');b.setAttribute('lang','en');
+    en.classList.add('active');or.classList.remove('active');
+    document.title='Manoj Kirana Store – Grocery Store in Gungunia';
+  }
+}
+
+// Mobile menu
+const hbg=document.getElementById('hbg'),mm=document.getElementById('mm'),mcl=document.getElementById('mcl');
+function cmm(){mm.classList.remove('open');document.body.style.overflow=''}
+hbg.addEventListener('click',()=>{mm.classList.add('open');document.body.style.overflow='hidden'});
+mcl.addEventListener('click',cmm);
+mm.addEventListener('click',e=>{if(e.target===mm)cmm()});
+
+// Open/closed badge
+(function(){
+  const now=new Date(),h=now.getHours(),m=now.getMinutes(),t=h*60+m;
+  const badges=document.querySelectorAll('.openbadge');
+  if(t<480||t>=1200){
+    badges.forEach(b=>{
+      b.style.background='rgba(255,80,80,.25)';
+      b.querySelector('.dot').style.background='#ff6b6b';
+      const s=b.querySelectorAll('span[data-l]');
+      s.forEach(sp=>{sp.textContent=sp.getAttribute('data-l')==='en'?'Closed Now':'ବନ୍ଦ ଅଛି'});
+    });
+  }
+})();
+</script>
+</body>
+</html>
