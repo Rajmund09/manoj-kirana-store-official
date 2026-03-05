@@ -1,508 +1,729 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" data-lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manoj Kirana Store – Grocery Store in Gungunia</title>
-<meta name="description" content="Manoj Kirana Store – Your trusted local grocery store in Gungunia, Odisha since 2013. Fresh groceries, daily essentials & wholesale available. Call 7873618898.">
-<meta name="keywords" content="kirana store gungunia, grocery store odisha, manoj kirana store, wholesale grocery gungunia odisha 766017">
-<meta name="author" content="Manoj Kirana Store">
-<meta property="og:title" content="Manoj Kirana Store – Grocery Store in Gungunia">
-<meta property="og:description" content="Your trusted local grocery store in Gungunia, Odisha since 2013. Open daily 8AM–8PM.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Oriya:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --g:#2d8a4e;--gd:#1e6b3c;--gl:#e8f5ed;
-  --acc:#f5a623;--w:#fff;
-  --c100:#f8f9fa;--c200:#e9ecef;--c600:#6c757d;--c800:#343a40;
-  --txt:#1a2e1a;--sh:0 2px 15px rgba(0,0,0,.08);
-  --r:12px;--tr:.25s ease;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Poppins','Noto Sans Oriya',sans-serif;color:var(--txt);background:var(--w);overflow-x:hidden}
-body.lang-or{font-family:'Noto Sans Oriya','Poppins',sans-serif}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Manoj Kirana Store – Your trusted local grocery store in Gungunia, Odisha since 2013. Fresh groceries, daily essentials & wholesale available. Call 7873618898." />
+  <meta name="keywords" content="kirana store gungunia, grocery store odisha, manoj kirana store, wholesale grocery gungunia odisha 766017" />
+  <meta name="author" content="Manoj Kirana Store" />
+  <meta name="robots" content="index, follow" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Manoj Kirana Store – Grocery Store in Gungunia, Odisha" />
+  <meta property="og:description" content="Your trusted local grocery store in Gungunia, Odisha since 2013. Open daily 8AM–8PM." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_IN" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://manojkirana.in/" />
+  <title>Manoj Kirana Store – Grocery Store in Gungunia, Odisha</title>
 
-/* Lang toggle */
-[data-l="or"]{display:none}
-body.lang-or [data-l="en"]{display:none}
-body.lang-or [data-l="or"]{display:block}
-span[data-l="or"]{display:none}
-body.lang-or span[data-l="en"]{display:none}
-body.lang-or span[data-l="or"]{display:inline}
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Noto+Sans+Oriya:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-/* Lang bar */
-.lbar{
-  background:linear-gradient(90deg,var(--gd),var(--g));
-  padding:10px 20px;
-  display:flex;
-  justify-content:flex-end;
-  align-items:center;
-}
+  <!-- Anti-flash: apply theme before CSS loads to prevent white flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('mkStore_theme');
+      if (!t) { t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
 
-.ltog{
-  display:flex;
-  background:rgba(255,255,255,.15);
-  border-radius:30px;
-  padding:4px;
-  backdrop-filter:blur(6px);
-}
-
-.lbtn{
-  padding:6px 18px;
-  border:none;
-  background:transparent;
-  color:rgba(255,255,255,.85);
-  font-size:13px;
-  font-weight:600;
-  cursor:pointer;
-  border-radius:20px;
-  transition:all .3s ease;
-  font-family:inherit;
-}
-
-.lbtn.active{
-  background:#fff;
-  color:var(--gd);
-  box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-/* Navbar */
-.nav{position:sticky;top:0;background:var(--w);box-shadow:0 2px 10px rgba(0,0,0,.1);z-index:1000;padding:10px 20px;display:flex;align-items:center;justify-content:space-between}
-.nbrand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.nlogo{width:42px;height:42px;background:linear-gradient(135deg,var(--g),var(--gd));border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
-.ntitle{font-size:15px;font-weight:700;color:var(--gd);line-height:1.2}
-.nsub{font-size:10px;color:var(--c600);font-weight:400}
-.nlinks{display:none}
-.hbg{background:none;border:none;cursor:pointer;padding:4px;display:flex;flex-direction:column;gap:5px}
-.hbg span{display:block;width:24px;height:2px;background:var(--g);border-radius:2px;transition:var(--tr)}
-
-/* Mobile menu */
-.mm{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:2000}
-.mm.open{display:block}
-.mmi{background:var(--w);width:75%;max-width:300px;height:100%;padding:24px 20px;overflow-y:auto}
-.mcl{background:none;border:none;font-size:24px;cursor:pointer;color:var(--c800);margin-bottom:24px;display:block}
-.mm a{display:flex;align-items:center;gap:10px;padding:14px 0;border-bottom:1px solid var(--c200);text-decoration:none;color:var(--txt);font-size:15px;font-weight:500}
-.mm a:last-child{border-bottom:none}
-.mm-icon{font-size:18px}
-
-/* Hero */
-.hero{background:linear-gradient(135deg,var(--g) 0%,var(--gd) 100%);padding:48px 20px 56px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-40%;right:-15%;width:380px;height:380px;background:rgba(255,255,255,.06);border-radius:50%;pointer-events:none}
-.hero::after{content:'';position:absolute;bottom:-25%;left:-10%;width:280px;height:280px;background:rgba(255,255,255,.04);border-radius:50%;pointer-events:none}
-.hbadge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.18);color:#fff;padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;margin-bottom:16px;position:relative}
-.hero h1{font-size:clamp(21px,5.5vw,38px);font-weight:700;color:var(--w);line-height:1.3;margin-bottom:16px;position:relative}
-.hsub{color:rgba(255,255,255,.85);font-size:13px;margin-bottom:32px;line-height:2;position:relative}
-.hbtns{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto;position:relative}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:10px;font-size:15px;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:var(--tr);font-family:inherit;min-height:50px}
-.btn-w{background:var(--w);color:var(--gd)}
-.btn-w:hover{background:var(--c100);transform:translateY(-1px)}
-.btn-wa{background:#25D366;color:#fff}
-.btn-wa:hover{background:#1da851;transform:translateY(-1px)}
-.btn-ol{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6)}
-.btn-ol:hover{border-color:#fff;transform:translateY(-1px)}
-.hstats{display:flex;justify-content:center;gap:28px;margin-top:40px;position:relative}
-.stat-n{font-size:22px;font-weight:700;color:#fff}
-.stat-l{font-size:11px;color:rgba(255,255,255,.75)}
-
-/* Sections */
-section{padding:48px 20px}
-.container{max-width:1100px;margin:0 auto}
-.stag{display:inline-block;background:var(--gl);color:var(--g);padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
-.stitle{font-size:clamp(20px,5vw,28px);font-weight:700;color:var(--txt);margin-bottom:8px;line-height:1.3}
-.sdesc{color:var(--c600);font-size:14px;line-height:1.7;max-width:520px}
-.div{width:48px;height:3px;background:var(--g);border-radius:2px;margin:10px 0 20px}
-
-/* About */
-.about{background:var(--c100)}
-.acontent{display:flex;flex-direction:column;gap:20px}
-.acard{background:var(--w);padding:24px;border-radius:var(--r);box-shadow:var(--sh)}
-.acard p{font-size:14px;line-height:1.85;color:var(--c600)}
-.acard p strong{color:var(--txt)}
-.afeats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.afeat{background:var(--w);padding:16px;border-radius:var(--r);box-shadow:var(--sh);display:flex;align-items:center;gap:10px}
-.afi{font-size:22px;flex-shrink:0}
-.aft{font-size:12px;font-weight:600;color:var(--txt)}
-
-/* Products */
-.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
-.pc{background:var(--w);border:2px solid var(--c200);border-radius:var(--r);padding:22px 16px;text-align:center;transition:var(--tr)}
-.pc:hover{border-color:var(--g);box-shadow:0 4px 20px rgba(45,138,78,.12);transform:translateY(-2px)}
-.pi{font-size:34px;margin-bottom:10px;display:block}
-.pn{font-size:12px;font-weight:600;color:var(--txt);line-height:1.4}
-.pc-hl{border-color:var(--g)!important;background:var(--gl)!important}
-.pc-hl .pn{color:var(--g)}
-
-/* Why */
-.why{background:var(--g)}
-.why .stag{background:rgba(255,255,255,.18);color:#fff}
-.why .stitle{color:#fff}
-.why .sdesc{color:rgba(255,255,255,.8)}
-.why .div{background:rgba(255,255,255,.35)}
-.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}
-.wc{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:var(--r);padding:22px 16px;text-align:center;transition:var(--tr)}
-.wc:hover{background:rgba(255,255,255,.18)}
-.wi{font-size:30px;margin-bottom:8px}
-.wt{font-size:13px;font-weight:600;color:#fff;line-height:1.4}
-
-/* Reviews */
-.reviews{background:var(--c100)}
-.rdisp{display:flex;align-items:center;gap:14px;margin:16px 0 24px}
-.rnum{font-size:52px;font-weight:700;color:var(--g);line-height:1}
-.stars{display:flex;gap:3px}
-.star{color:var(--acc);font-size:18px}
-.rcnt{font-size:12px;color:var(--c600);margin-top:3px}
-.rc{background:var(--w);border-radius:var(--r);padding:20px;box-shadow:var(--sh);margin-top:14px}
-.rh{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.rav{width:44px;height:44px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--g);flex-shrink:0}
-.rn{font-size:14px;font-weight:600;color:var(--txt)}
-.rd{font-size:11px;color:var(--c600)}
-.rt{font-size:14px;color:var(--c600);line-height:1.65;font-style:italic}
-.gbadge{display:inline-flex;align-items:center;gap:6px;background:var(--w);border:1px solid var(--c200);border-radius:8px;padding:8px 14px;font-size:12px;font-weight:600;color:var(--c800);text-decoration:none;margin-top:18px}
-
-/* Contact */
-.cgrid{display:flex;flex-direction:column;gap:16px;margin-top:24px}
-.ccard{background:var(--c100);border-radius:var(--r);padding:4px 20px 8px}
-.ci{display:flex;align-items:flex-start;gap:14px;padding:14px 0;border-bottom:1px solid var(--c200)}
-.ci:last-child{border-bottom:none}
-.cicon{width:40px;height:40px;background:var(--gl);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;margin-top:2px}
-.clbl{font-size:10px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
-.cval{font-size:14px;color:var(--txt);font-weight:500;line-height:1.5}
-.clink{color:var(--g);text-decoration:none;font-weight:600}
-.mapbox{border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);margin-top:16px}
-.mapbox iframe{width:100%;height:260px;border:none;display:block}
-.cbtns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
-.cbtns .btn{flex:1;min-width:130px}
-.btn-g{background:var(--g);color:#fff}
-.btn-g:hover{background:var(--gd)}
-.btn-dir{border:2px solid var(--g);color:var(--g);background:transparent}
-.btn-dir:hover{background:var(--gl)}
-
-/* Footer */
-footer{background:var(--gd);padding:36px 20px;text-align:center}
-.flogo{font-size:22px;font-weight:700;color:#fff;margin-bottom:6px}
-.ftag{font-size:13px;color:rgba(255,255,255,.7);margin-bottom:2px}
-.fdiv{width:40px;height:2px;background:rgba(255,255,255,.2);margin:14px auto}
-.fcopy{font-size:11px;color:rgba(255,255,255,.45)}
-
-/* WhatsApp float */
-.wafloat{position:fixed;bottom:24px;right:20px;width:58px;height:58px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.45);z-index:999;transition:var(--tr);animation:wapulse 2.5s infinite}
-.wafloat:hover{transform:scale(1.1)}
-@keyframes wapulse{0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.4)}50%{box-shadow:0 4px 32px rgba(37,211,102,.75)}}
-
-/* Open badge */
-.openbadge{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.18);color:#fff;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;margin-left:8px}
-.dot{width:7px;height:7px;background:#7fff7f;border-radius:50%;animation:blink 1.6s infinite}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
-
-/* Responsive */
-@media(min-width:580px){
-  .hbtns{flex-direction:row;flex-wrap:wrap;justify-content:center;max-width:100%}
-  .pgrid{grid-template-columns:repeat(3,1fr)}
-  .wgrid{grid-template-columns:repeat(3,1fr)}
-  .afeats{grid-template-columns:repeat(4,1fr)}
-}
-@media(min-width:900px){
-  .hbg{display:none}
-  .nlinks{display:flex;align-items:center;gap:4px}
-  .nlinks a{padding:8px 13px;text-decoration:none;color:var(--txt);font-size:13px;font-weight:500;border-radius:8px;transition:var(--tr)}
-  .nlinks a:hover{background:var(--gl);color:var(--g)}
-  .nlinks .ncta{background:var(--g);color:#fff}
-  .nlinks .ncta:hover{background:var(--gd);color:#fff}
-  section{padding:72px 40px}
-  .hero{padding:80px 40px 90px}
-  .pgrid{grid-template-columns:repeat(4,1fr)}
-  .wgrid{grid-template-columns:repeat(3,1fr)}
-  .cgrid{flex-direction:row;align-items:flex-start}
-  .ccard{flex:1}
-  .mapbox{flex:1.1;margin-top:0}
-  .acontent{flex-direction:row;align-items:flex-start}
-  .acard{flex:1.2}
-  .afeats{flex:1;grid-template-columns:1fr 1fr}
-  .mapbox iframe{height:320px}
-}
-@media(min-width:1200px){
-  section{padding:80px 80px}
-  .hero{padding:96px 80px 108px}
-}
-</style>
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<!-- Language Bar -->
-<div class="lbar">
-  <div class="ltog">
-    <button class="lbtn active" id="ben" onclick="setLang('en')">English</button>
-    <button class="lbtn" id="bor" onclick="setLang('or')">ଓଡ଼ିଆ</button>
-  </div>
-</div>
+  <!-- ═══════════════════════════════════════
+       SCROLL PROGRESS BAR
+  ═══════════════════════════════════════ -->
+  <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-label="Page scroll progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-<!-- Navbar -->
-<nav class="nav">
-  <a href="#" class="nbrand">
-    <div class="nlogo">🛒</div>
-    <div>
-      <div class="ntitle"><span data-l="en">Manoj Kirana Store</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋର</span></div>
-      <div class="nsub"><span data-l="en">Gungunia, Odisha</span><span data-l="or">ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା</span></div>
+  <!-- ═══════════════════════════════════════
+       TOP BAR — Language + Theme (priority)
+       Replaces the old utility/announcement bar.
+       Always visible. No long text on mobile.
+  ═══════════════════════════════════════ -->
+  <div class="top-bar" role="toolbar" aria-label="Language and theme settings">
+    <div class="container top-bar__inner">
+
+      <!-- Left: store info (desktop only) -->
+      <span class="top-bar__info">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <a href="tel:7873618898" class="top-bar__link">7873618898</a>
+        <span class="top-bar__sep" aria-hidden="true">·</span>
+        <span data-i18n="utilityHours"></span>
+      </span>
+
+      <!-- Right: Language + Theme — ALWAYS VISIBLE -->
+      <div class="top-bar__controls">
+
+        <!-- Language label (desktop only) -->
+        <span class="top-bar__lang-label" data-i18n="selectLang"></span>
+
+        <!-- Language Buttons — large, tappable -->
+        <div class="lang-selector" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang-btn="en" aria-label="Switch to English" aria-pressed="true">English</button>
+          <button class="lang-btn" data-lang-btn="or" aria-label="ଓଡ଼ିଆ ଭାଷାକୁ ଯାନ୍ତୁ" aria-pressed="false">ଓଡ଼ିଆ</button>
+          <button class="lang-btn" data-lang-btn="hi" aria-label="हिंदी में जाएं" aria-pressed="false">हिंदी</button>
+        </div>
+
+        <!-- Divider -->
+        <span class="top-bar__div" aria-hidden="true"></span>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="theme-icon theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="theme-icon theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </button>
+
+      </div>
     </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR — simplified for mobile
+  ═══════════════════════════════════════ -->
+  <header class="header" id="header" role="banner">
+    <nav class="nav container" aria-label="Main navigation">
+
+      <!-- Brand -->
+      <a href="#home" class="nav__brand" aria-label="Manoj Kirana Store – Home">
+        <div class="nav__logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 14.33L4.02 5H2V3h3.25l.72 2H20c.62 0 1.08.61.87 1.2l-2.5 7.5c-.16.48-.61.8-1.12.8H8.5c-.53 0-1-.36-1.15-.88l-.18-.59z"/></svg>
+        </div>
+        <div class="nav__brand-text">
+          <span class="nav__brand-name" data-i18n="brandName"></span>
+          <span class="nav__brand-sub" data-i18n="brandSub"></span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav__links" role="list">
+        <li><a href="#about"    class="nav__link" data-i18n="navAbout"></a></li>
+        <li><a href="#products" class="nav__link" data-i18n="navProducts"></a></li>
+        <li><a href="#why-us"   class="nav__link" data-i18n="navWhy"></a></li>
+        <li><a href="#reviews"  class="nav__link" data-i18n="navReviews"></a></li>
+        <li><a href="#contact"  class="nav__link" data-i18n="navContact"></a></li>
+      </ul>
+
+      <!-- Nav Controls: desktop-only call CTA + mobile hamburger -->
+      <div class="nav__controls">
+        <!-- Call CTA — desktop only -->
+        <a href="tel:7873618898" class="nav__cta" aria-label="Call Manoj Kirana Store now">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span data-i18n="callNow"></span>
+        </a>
+
+        <!-- Hamburger — mobile only -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════
+       MOBILE MENU OVERLAY
+  ═══════════════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <div class="mobile-menu__backdrop" id="menuBackdrop" aria-hidden="true"></div>
+    <div class="mobile-menu__panel">
+      <div class="mobile-menu__header">
+        <div class="nav__brand" aria-hidden="true">
+          <div class="nav__logo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.17 14.33L4.02 5H2V3h3.25l.72 2H20c.62 0 1.08.61.87 1.2l-2.5 7.5c-.16.48-.61.8-1.12.8H8.5c-.53 0-1-.36-1.15-.88l-.18-.59z"/></svg>
+          </div>
+          <span class="nav__brand-name" data-i18n="brandName"></span>
+        </div>
+        <button class="mobile-menu__close" id="menuClose" aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <ul class="mobile-menu__links" role="list">
+        <li><a href="#about" class="mobile-menu__link" data-i18n="navAbout">
+          <span class="mobile-menu__icon" aria-hidden="true">ℹ️</span>
+        </a></li>
+        <li><a href="#products" class="mobile-menu__link" data-i18n="navProducts">
+          <span class="mobile-menu__icon" aria-hidden="true">🛒</span>
+        </a></li>
+        <li><a href="#why-us" class="mobile-menu__link" data-i18n="navWhy">
+          <span class="mobile-menu__icon" aria-hidden="true">⭐</span>
+        </a></li>
+        <li><a href="#reviews" class="mobile-menu__link" data-i18n="navReviews">
+          <span class="mobile-menu__icon" aria-hidden="true">💬</span>
+        </a></li>
+        <li><a href="#contact" class="mobile-menu__link" data-i18n="navContact">
+          <span class="mobile-menu__icon" aria-hidden="true">📍</span>
+        </a></li>
+      </ul>
+
+      <div class="mobile-menu__actions">
+        <a href="tel:7873618898" class="btn btn--primary btn--full">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span data-i18n="callNow"></span>
+        </a>
+        <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--full">
+          <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+          <span data-i18n="whatsappOrder"></span>
+        </a>
+      </div>
+
+      <div class="mobile-menu__lang">
+        <span class="mobile-menu__lang-label" data-i18n="selectLang"></span>
+        <div class="mobile-menu__lang-btns" role="group" aria-label="Language selection">
+          <button class="lang-btn active" data-lang-btn="en" aria-pressed="true">EN – English</button>
+          <button class="lang-btn" data-lang-btn="or" aria-pressed="false">ଓଡ଼ – ଓଡ଼ିଆ</button>
+          <button class="lang-btn" data-lang-btn="hi" aria-pressed="false">हिं – हिंदी</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ═══════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hero" id="home" aria-labelledby="heroHeading">
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+      <div class="hero__bg-orb hero__bg-orb--1" aria-hidden="true"></div>
+      <div class="hero__bg-orb hero__bg-orb--2" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content reveal-up">
+
+          <!-- Status Badge -->
+          <div class="hero__badges">
+            <span class="badge badge--glass" id="statusBadge" aria-live="polite">
+              <span class="badge__dot" id="statusDot" aria-hidden="true"></span>
+              <span id="statusText" data-i18n="openNow"></span>
+            </span>
+            <span class="badge badge--glass">
+              ⭐ <span data-i18n="ratingBadge"></span>
+            </span>
+          </div>
+
+          <!-- Heading -->
+          <h1 class="hero__title" id="heroHeading">
+            <span class="hero__title-line" data-i18n="heroLine1"></span>
+            <span class="hero__title-accent" data-i18n="heroLine2"></span>
+          </h1>
+
+          <!-- Subtext -->
+          <p class="hero__sub" data-i18n="heroSub"></p>
+
+          <!-- CTA Buttons -->
+          <div class="hero__actions">
+            <a href="tel:7873618898" class="btn btn--primary btn--lg" aria-label="Call Manoj Kirana Store at 7873618898">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span data-i18n="callNow"></span>
+            </a>
+            <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp btn--lg" aria-label="Order on WhatsApp">
+              <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+              <span data-i18n="whatsappOrder"></span>
+            </a>
+            <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" rel="noopener noreferrer" class="btn btn--outline-light btn--lg" aria-label="Get directions to Manoj Kirana Store">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="getDirections"></span>
+            </a>
+          </div>
+
+          <!-- Stats Row -->
+          <div class="hero__stats" aria-label="Key statistics">
+            <div class="hero__stat">
+              <span class="hero__stat-num">11+</span>
+              <span class="hero__stat-label" data-i18n="statYears"></span>
+            </div>
+            <div class="hero__stat-div" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num">5.0 ⭐</span>
+              <span class="hero__stat-label" data-i18n="statRating"></span>
+            </div>
+            <div class="hero__stat-div" aria-hidden="true"></div>
+            <div class="hero__stat">
+              <span class="hero__stat-num" data-i18n="statHoursNum"></span>
+              <span class="hero__stat-label" data-i18n="statHoursLabel"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual -->
+        <div class="hero__visual reveal-right" aria-hidden="true">
+          <div class="hero__card-stack">
+            <div class="hero__card hero__card--1">
+              <span class="hero__card-icon">🌾</span>
+              <span class="hero__card-text" data-i18n="cardFresh"></span>
+            </div>
+            <div class="hero__card hero__card--2">
+              <span class="hero__card-icon">📦</span>
+              <span class="hero__card-text" data-i18n="cardWholesale"></span>
+            </div>
+            <div class="hero__card hero__card--3">
+              <span class="hero__card-icon">💬</span>
+              <span class="hero__card-text" data-i18n="cardWhatsapp"></span>
+            </div>
+            <div class="hero__store-badge">
+              <div class="hero__store-icon">🏪</div>
+              <div>
+                <div class="hero__store-name" data-i18n="brandName"></div>
+                <div class="hero__store-loc">Gungunia, Odisha</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave -->
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="var(--bg-primary)"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════ -->
+    <section class="section about" id="about" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__tag" data-i18n="aboutTag"></span>
+          <h2 class="section__title" id="aboutHeading" data-i18n="aboutTitle"></h2>
+          <p class="section__desc" data-i18n="aboutDesc"></p>
+        </div>
+
+        <div class="about__grid">
+          <!-- Story Card -->
+          <div class="about__story card reveal-left">
+            <div class="about__story-icon" aria-hidden="true">🏪</div>
+            <p class="about__story-text" data-i18n="aboutStory"></p>
+            <div class="about__story-sig">
+              <div class="about__sig-avatar" aria-hidden="true">MM</div>
+              <div>
+                <div class="about__sig-name">Manoj Mund</div>
+                <div class="about__sig-role" data-i18n="ownerLabel"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlights Grid -->
+          <div class="about__highlights reveal-right">
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">🏆</div>
+              <div class="highlight-card__num">2013</div>
+              <div class="highlight-card__label" data-i18n="hlEst"></div>
+            </div>
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">⭐</div>
+              <div class="highlight-card__num">5.0</div>
+              <div class="highlight-card__label" data-i18n="hlRating"></div>
+            </div>
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">📦</div>
+              <div class="highlight-card__num" data-i18n="hlWholesaleNum"></div>
+              <div class="highlight-card__label" data-i18n="hlWholesale"></div>
+            </div>
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">🕗</div>
+              <div class="highlight-card__num">8–8</div>
+              <div class="highlight-card__label" data-i18n="hlOpen"></div>
+            </div>
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">👨‍👩‍👧</div>
+              <div class="highlight-card__num" data-i18n="hlFamilyNum"></div>
+              <div class="highlight-card__label" data-i18n="hlFamily"></div>
+            </div>
+            <div class="highlight-card card">
+              <div class="highlight-card__icon" aria-hidden="true">💰</div>
+              <div class="highlight-card__num" data-i18n="hlPriceNum"></div>
+              <div class="highlight-card__label" data-i18n="hlPrice"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PRODUCTS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="section products" id="products" aria-labelledby="productsHeading">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__tag" data-i18n="productsTag"></span>
+          <h2 class="section__title" id="productsHeading" data-i18n="productsTitle"></h2>
+          <p class="section__desc" data-i18n="productsDesc"></p>
+        </div>
+
+        <div class="products__grid">
+          <!-- Product cards – each has data-i18n for name and desc -->
+          <article class="product-card card reveal-up" style="--delay: 0ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🌾</div>
+            <h3 class="product-card__name" data-i18n="prod1Name"></h3>
+            <p class="product-card__desc" data-i18n="prod1Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 60ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🫘</div>
+            <h3 class="product-card__name" data-i18n="prod2Name"></h3>
+            <p class="product-card__desc" data-i18n="prod2Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 120ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🫙</div>
+            <h3 class="product-card__name" data-i18n="prod3Name"></h3>
+            <p class="product-card__desc" data-i18n="prod3Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 180ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🍿</div>
+            <h3 class="product-card__name" data-i18n="prod4Name"></h3>
+            <p class="product-card__desc" data-i18n="prod4Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 240ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">☕</div>
+            <h3 class="product-card__name" data-i18n="prod5Name"></h3>
+            <p class="product-card__desc" data-i18n="prod5Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 300ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🧼</div>
+            <h3 class="product-card__name" data-i18n="prod6Name"></h3>
+            <p class="product-card__desc" data-i18n="prod6Desc"></p>
+          </article>
+          <article class="product-card card reveal-up" style="--delay: 360ms" tabindex="0" role="article">
+            <div class="product-card__icon" aria-hidden="true">🛒</div>
+            <h3 class="product-card__name" data-i18n="prod7Name"></h3>
+            <p class="product-card__desc" data-i18n="prod7Desc"></p>
+          </article>
+          <article class="product-card product-card--featured card reveal-up" style="--delay: 420ms" tabindex="0" role="article">
+            <div class="product-card__badge" data-i18n="prodBadge"></div>
+            <div class="product-card__icon" aria-hidden="true">📦</div>
+            <h3 class="product-card__name" data-i18n="prod8Name"></h3>
+            <p class="product-card__desc" data-i18n="prod8Desc"></p>
+          </article>
+        </div>
+
+        <div class="products__cta reveal-up">
+          <a href="https://wa.me/917873618898?text=Hello%2C%20I%20need%20to%20enquire%20about%20wholesale%20grocery." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">
+            <svg width="17" height="17" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+            <span data-i18n="wholesaleEnquiry"></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         WHY CHOOSE US
+    ═══════════════════════════════════════ -->
+    <section class="section why-us" id="why-us" aria-labelledby="whyHeading">
+      <div class="why-us__bg" aria-hidden="true"></div>
+      <div class="container" style="position:relative">
+        <div class="section__header section__header--light reveal-up">
+          <span class="section__tag section__tag--light" data-i18n="whyTag"></span>
+          <h2 class="section__title section__title--light" id="whyHeading" data-i18n="whyTitle"></h2>
+          <p class="section__desc section__desc--light" data-i18n="whyDesc"></p>
+        </div>
+
+        <div class="why-us__grid">
+          <div class="why-card reveal-up" style="--delay:0ms">
+            <div class="why-card__icon" aria-hidden="true">🏆</div>
+            <h3 class="why-card__title" data-i18n="why1Title"></h3>
+            <p class="why-card__desc" data-i18n="why1Desc"></p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:80ms">
+            <div class="why-card__icon" aria-hidden="true">⭐</div>
+            <h3 class="why-card__title" data-i18n="why2Title"></h3>
+            <p class="why-card__desc" data-i18n="why2Desc"></p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:160ms">
+            <div class="why-card__icon" aria-hidden="true">💰</div>
+            <h3 class="why-card__title" data-i18n="why3Title"></h3>
+            <p class="why-card__desc" data-i18n="why3Desc"></p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:240ms">
+            <div class="why-card__icon" aria-hidden="true">🤝</div>
+            <h3 class="why-card__title" data-i18n="why4Title"></h3>
+            <p class="why-card__desc" data-i18n="why4Desc"></p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:320ms">
+            <div class="why-card__icon" aria-hidden="true">🕗</div>
+            <h3 class="why-card__title" data-i18n="why5Title"></h3>
+            <p class="why-card__desc" data-i18n="why5Desc"></p>
+          </div>
+          <div class="why-card reveal-up" style="--delay:400ms">
+            <div class="why-card__icon" aria-hidden="true">📦</div>
+            <h3 class="why-card__title" data-i18n="why6Title"></h3>
+            <p class="why-card__desc" data-i18n="why6Desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         REVIEWS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="section reviews" id="reviews" aria-labelledby="reviewsHeading">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__tag" data-i18n="reviewsTag"></span>
+          <h2 class="section__title" id="reviewsHeading" data-i18n="reviewsTitle"></h2>
+        </div>
+
+        <!-- Rating Display -->
+        <div class="reviews__summary reveal-up" aria-label="Overall rating: 5 out of 5 stars based on 7 Google reviews">
+          <div class="reviews__big-num" aria-hidden="true">5.0</div>
+          <div class="reviews__meta">
+            <div class="stars" aria-label="5 stars" role="img">
+              <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+              <span class="star" aria-hidden="true">★</span>
+            </div>
+            <div class="reviews__count" data-i18n="reviewsCount"></div>
+            <a href="https://maps.google.com/?q=Manoj+Kirana+Store+Gungunia+Odisha" target="_blank" rel="noopener noreferrer" class="reviews__google-link" aria-label="View on Google Maps">
+              🌐 <span data-i18n="viewOnGoogle"></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Review Cards -->
+        <div class="reviews__grid">
+          <article class="review-card card reveal-up" style="--delay:0ms" aria-label="Customer review">
+            <div class="review-card__header">
+              <div class="review-card__avatar" aria-hidden="true">G</div>
+              <div class="review-card__info">
+                <div class="review-card__name" data-i18n="review1Name"></div>
+                <div class="stars stars--sm" aria-label="5 stars" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+              <div class="review-card__source" aria-label="Google review" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+              </div>
+            </div>
+            <blockquote class="review-card__text" data-i18n="review1Text"></blockquote>
+          </article>
+
+          <article class="review-card card reveal-up" style="--delay:100ms" aria-label="Customer review">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--orange" aria-hidden="true">L</div>
+              <div class="review-card__info">
+                <div class="review-card__name" data-i18n="review2Name"></div>
+                <div class="stars stars--sm" aria-label="5 stars" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </div>
+            <blockquote class="review-card__text" data-i18n="review2Text"></blockquote>
+          </article>
+
+          <article class="review-card card reveal-up" style="--delay:200ms" aria-label="Customer review">
+            <div class="review-card__header">
+              <div class="review-card__avatar review-card__avatar--blue" aria-hidden="true">R</div>
+              <div class="review-card__info">
+                <div class="review-card__name" data-i18n="review3Name"></div>
+                <div class="stars stars--sm" aria-label="5 stars" role="img">
+                  <span aria-hidden="true">★★★★★</span>
+                </div>
+              </div>
+            </div>
+            <blockquote class="review-card__text" data-i18n="review3Text"></blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════ -->
+    <section class="section contact" id="contact" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="section__header reveal-up">
+          <span class="section__tag" data-i18n="contactTag"></span>
+          <h2 class="section__title" id="contactHeading" data-i18n="contactTitle"></h2>
+          <p class="section__desc" data-i18n="contactDesc"></p>
+        </div>
+
+        <div class="contact__grid">
+          <!-- Info Panel -->
+          <div class="contact__info reveal-left">
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-item__body">
+                <div class="contact-item__label" data-i18n="labelAddress"></div>
+                <div class="contact-item__value">JRF3+WHX, Gungunia,<br>Odisha 766017</div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <div class="contact-item__body">
+                <div class="contact-item__label" data-i18n="labelPhone"></div>
+                <a href="tel:7873618898" class="contact-item__link">7873618898</a>
+                <a href="tel:7978567667" class="contact-item__link contact-item__link--secondary">7978567667</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item__icon contact-item__icon--wa" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+              </div>
+              <div class="contact-item__body">
+                <div class="contact-item__label">WhatsApp</div>
+                <a href="https://wa.me/917873618898" target="_blank" rel="noopener noreferrer" class="contact-item__link">7873618898</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="contact-item__body">
+                <div class="contact-item__label" data-i18n="labelHours"></div>
+                <div class="contact-item__value">
+                  <span data-i18n="hoursLine1"></span><br>
+                  <strong data-i18n="hoursLine2"></strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="contact__actions">
+              <a href="tel:7873618898" class="btn btn--primary" aria-label="Call store">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <span data-i18n="callNow"></span>
+              </a>
+              <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" aria-label="Order on WhatsApp">
+                <svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+                <span data-i18n="whatsappOrder"></span>
+              </a>
+              <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" rel="noopener noreferrer" class="btn btn--outline" aria-label="Get directions">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span data-i18n="getDirections"></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="contact__map reveal-right">
+            <div class="map-container" role="region" aria-label="Store location map">
+              <iframe
+                src="https://maps.google.com/maps?q=Gungunia+Odisha+766017&output=embed&z=14"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Manoj Kirana Store on Google Maps – Gungunia, Odisha 766017"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__top">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo" aria-hidden="true">🛒</div>
+          <div class="footer__brand-name" data-i18n="brandName"></div>
+          <p class="footer__brand-desc" data-i18n="footerDesc"></p>
+        </div>
+        <div class="footer__info">
+          <div class="footer__info-item">
+            <span class="footer__info-icon" aria-hidden="true">📍</span>
+            <span>JRF3+WHX, Gungunia, Odisha 766017</span>
+          </div>
+          <div class="footer__info-item">
+            <span class="footer__info-icon" aria-hidden="true">📞</span>
+            <a href="tel:7873618898" class="footer__link">7873618898</a>
+          </div>
+          <div class="footer__info-item">
+            <span class="footer__info-icon" aria-hidden="true">🕗</span>
+            <span data-i18n="footerHours"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <span data-i18n="footerCopy"></span>
+        <span class="footer__heart" aria-hidden="true">♥</span>
+        <span data-i18n="footerMadeIn"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       FLOATING ACTIONS
+  ═══════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════
+       MOBILE STICKY BOTTOM ACTION BAR
+       The single most important UX element
+       for local / village mobile users.
+       Hidden on desktop (≥ 768px).
+  ═══════════════════════════════════════ -->
+  <nav class="bottom-bar" id="bottomBar" aria-label="Quick actions">
+    <a href="tel:7873618898" class="bottom-bar__btn bottom-bar__btn--call" aria-label="Call Manoj Kirana Store">
+      <span class="bottom-bar__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      </span>
+      <span class="bottom-bar__label" data-i18n="callNow"></span>
+    </a>
+    <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order."
+       target="_blank" rel="noopener noreferrer"
+       class="bottom-bar__btn bottom-bar__btn--whatsapp"
+       aria-label="Order via WhatsApp">
+      <span class="bottom-bar__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+      </span>
+      <span class="bottom-bar__label" data-i18n="whatsappOrder"></span>
+    </a>
+    <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017"
+       target="_blank" rel="noopener noreferrer"
+       class="bottom-bar__btn bottom-bar__btn--directions"
+       aria-label="Get directions to the store">
+      <span class="bottom-bar__icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </span>
+      <span class="bottom-bar__label" data-i18n="getDirections"></span>
+    </a>
+  </nav>
+
+  <!-- WhatsApp Float — desktop only -->
+  <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order."
+     target="_blank" rel="noopener noreferrer"
+     class="fab fab--whatsapp"
+     id="fabWa"
+     aria-label="Chat on WhatsApp to place an order">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="white" aria-hidden="true"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+    <span class="fab__tooltip" data-i18n="whatsappOrder"></span>
   </a>
-  <div class="nlinks">
-    <a href="#about"><span data-l="en">About</span><span data-l="or">ବିଷୟରେ</span></a>
-    <a href="#products"><span data-l="en">Products</span><span data-l="or">ସାମଗ୍ରୀ</span></a>
-    <a href="#why-us"><span data-l="en">Why Us</span><span data-l="or">ଆମ ବିଶେଷତ୍ୱ</span></a>
-    <a href="#contact"><span data-l="en">Contact</span><span data-l="or">ଯୋଗାଯୋଗ</span></a>
-    <a href="tel:7873618898" class="ncta">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ</span></a>
-  </div>
-  <button class="hbg" id="hbg" aria-label="Open menu">
-    <span></span><span></span><span></span>
+
+  <!-- Back to Top -->
+  <button class="fab fab--top" id="backToTop" aria-label="Back to top" hidden>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
-</nav>
 
-<!-- Mobile Menu -->
-<div class="mm" id="mm">
-  <div class="mmi">
-    <button class="mcl" id="mcl">✕</button>
-    <a href="#about" onclick="cmm()"><span class="mm-icon">ℹ️</span><span data-l="en">About Us</span><span data-l="or">ଆମ ବିଷୟରେ</span></a>
-    <a href="#products" onclick="cmm()"><span class="mm-icon">🛒</span><span data-l="en">Products</span><span data-l="or">ସାମଗ୍ରୀ</span></a>
-    <a href="#why-us" onclick="cmm()"><span class="mm-icon">⭐</span><span data-l="en">Why Choose Us</span><span data-l="or">ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ</span></a>
-    <a href="#reviews" onclick="cmm()"><span class="mm-icon">💬</span><span data-l="en">Reviews</span><span data-l="or">ସମୀକ୍ଷା</span></a>
-    <a href="#contact" onclick="cmm()"><span class="mm-icon">📍</span><span data-l="en">Contact & Map</span><span data-l="or">ଯୋଗାଯୋଗ ଓ ମ୍ୟାପ</span></a>
-    <a href="tel:7873618898" style="color:var(--g)"><span class="mm-icon">📞</span>7873618898</a>
-    <a href="https://wa.me/917873618898" target="_blank" style="color:#25D366"><span class="mm-icon">💬</span>WhatsApp</a>
-  </div>
-</div>
+  <!-- Skip to main content (accessibility) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="hbadge">
-      ⭐ <span data-l="en">5.0 Rating on Google</span><span data-l="or">ଗୁଗଲ ରେ ୫.୦ ରେଟିଂ</span>
-      <span class="openbadge"><span class="dot"></span><span data-l="en">Open Now</span><span data-l="or">ଖୋଲା ଅଛି</span></span>
-    </div>
-    <h1>
-      <span data-l="en">Your Trusted Grocery Store<br>in Gungunia Since 2013</span>
-      <span data-l="or">୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆର<br>ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ</span>
-    </h1>
-    <p class="hsub">
-      <span data-l="en">🌾 Fresh Groceries &nbsp;•&nbsp; 🏠 Daily Essentials &nbsp;•&nbsp; 📦 Wholesale Available &nbsp;•&nbsp; 😊 Friendly Service</span>
-      <span data-l="or">🌾 ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ &nbsp;•&nbsp; 🏠 ଦୈନନ୍ଦିନ ଜରୁରୀ &nbsp;•&nbsp; 📦 ଥୋକ ଉପଲବ୍ଧ &nbsp;•&nbsp; 😊 ଆନ୍ତରିକ ସେବା</span>
-    </p>
-    <div class="hbtns">
-      <a href="tel:7873618898" class="btn btn-w">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ କରନ୍ତୁ</span></a>
-      <a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-wa">💬 <span data-l="en">WhatsApp Order</span><span data-l="or">ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର</span></a>
-      <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" class="btn btn-ol">📍 <span data-l="en">Get Directions</span><span data-l="or">ଦିଗ ଖୋଜନ୍ତୁ</span></a>
-    </div>
-    <div class="hstats">
-      <div><div class="stat-n">11+</div><div class="stat-l"><span data-l="en">Years Serving</span><span data-l="or">ବର୍ଷ ସେବା</span></div></div>
-      <div><div class="stat-n">5.0 ⭐</div><div class="stat-l"><span data-l="en">Google Rating</span><span data-l="or">ଗୁଗଲ ରେଟିଂ</span></div></div>
-      <div><div class="stat-n">8AM–8PM</div><div class="stat-l"><span data-l="en">Daily Open</span><span data-l="or">ସବୁଦିନ ଖୋଲା</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="about" id="about">
-  <div class="container">
-    <span class="stag"><span data-l="en">Our Story</span><span data-l="or">ଆମ କଥା</span></span>
-    <h2 class="stitle"><span data-l="en">A Trusted Name in Gungunia</span><span data-l="or">ଗୁଙ୍ଗୁନିଆର ଏକ ବିଶ୍ୱସ୍ତ ନାମ</span></h2>
-    <div class="div"></div>
-    <div class="acontent">
-      <div class="acard">
-        <p data-l="en">Since 2013, <strong>Manoj Kirana Store</strong> has been the heartbeat of Gungunia's daily life. Owner <strong>Manoj Mund</strong> started this humble shop with a simple promise — fresh groceries, everyday essentials, and honest service to every family in our community.<br><br>What began as a small kirana has grown into a trusted local institution. Whether you need rice for dinner, oil for cooking, or supplies in bulk — we are here for you, open every day from <strong>8 AM to 8 PM</strong>.<br><br>We also serve <strong>wholesale buyers</strong>, making us the go-to store for both families and small businesses in the area.</p>
-        <p data-l="or">୨୦୧୩ ଠାରୁ, <strong>ମନୋଜ କିରାଣା ଷ୍ଟୋର</strong> ଗୁଙ୍ଗୁନିଆର ଦୈନନ୍ଦିନ ଜୀବନର ଏକ ଅଂଶ ହୋଇ ଆସୁଛି। ମାଲିକ <strong>ମନୋଜ ମୁଣ୍ଡ</strong> ଏକ ସରଳ ପ୍ରତିଶ୍ରୁତି ସହ ଏହି ଦୋକାନ ଆରମ୍ଭ କଲେ — ସୁଲଭ ମୂଲ୍ୟରେ ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ ଓ ଆନ୍ତରିକ ସେବା।<br><br>ଛୋଟ ଏକ କିରାଣା ଦୋକାନ ଭାବରେ ଆରମ୍ଭ ହୋଇ ଏହା ଆଜି ଏକ ବିଶ୍ୱସ୍ତ ସ୍ଥାନ ହୋଇଛି। ଆପଣ ଚାଉଳ, ତେଲ, ବା ଥୋକ ସାମଗ୍ରୀ — ଯାହା ହେଉ, ଆମେ ସବୁଦିନ <strong>ସକାଳ ୮ ଟାରୁ ରାତ୍ରି ୮ ଟା</strong> ଯାଏ ଖୋଲା ଅଛୁ।</p>
-      </div>
-      <div class="afeats">
-        <div class="afeat"><span class="afi">🏪</span><span class="aft"><span data-l="en">Est. 2013</span><span data-l="or">ପ୍ରତିଷ୍ଠା ୨୦୧୩</span></span></div>
-        <div class="afeat"><span class="afi">👨‍👩‍👧</span><span class="aft"><span data-l="en">Family Run</span><span data-l="or">ପାରିବାରିକ ଦୋକାନ</span></span></div>
-        <div class="afeat"><span class="afi">📦</span><span class="aft"><span data-l="en">Wholesale</span><span data-l="or">ଥୋକ ଉପଲବ୍ଧ</span></span></div>
-        <div class="afeat"><span class="afi">🕗</span><span class="aft"><span data-l="en">Open Daily</span><span data-l="or">ସବୁଦିନ ଖୋଲା</span></span></div>
-        <div class="afeat"><span class="afi">💰</span><span class="aft"><span data-l="en">Best Prices</span><span data-l="or">ଉଚିତ ଦାମ</span></span></div>
-        <div class="afeat"><span class="afi">⭐</span><span class="aft"><span data-l="en">5.0 Rating</span><span data-l="or">୫.୦ ରେଟିଂ</span></span></div>
-        <div class="afeat"><span class="afi">🤝</span><span class="aft"><span data-l="en">Trusted</span><span data-l="or">ବିଶ୍ୱସ୍ତ</span></span></div>
-        <div class="afeat"><span class="afi">🌾</span><span class="aft"><span data-l="en">Fresh Stock</span><span data-l="or">ସତେଜ ଜିନିଷ</span></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Products -->
-<section id="products">
-  <div class="container">
-    <span class="stag"><span data-l="en">What We Offer</span><span data-l="or">ଆମ ସାମଗ୍ରୀ</span></span>
-    <h2 class="stitle"><span data-l="en">Our Product Categories</span><span data-l="or">ଆମ ଉତ୍ପାଦ ବିଭାଗ</span></h2>
-    <div class="div"></div>
-    <p class="sdesc"><span data-l="en">Everything your household needs — fresh, affordable, and always in stock.</span><span data-l="or">ଆପଣଙ୍କ ଘର ପାଇଁ ସବୁ ଜିନିଷ — ସତେଜ, ସସ୍ତା ଓ ସବୁବେଳେ ଉପଲବ୍ଧ।</span></p>
-    <div class="pgrid">
-      <div class="pc"><span class="pi">🌾</span><div class="pn"><span data-l="en">Rice & Atta</span><span data-l="or">ଚାଉଳ ଓ ଆଟା</span></div></div>
-      <div class="pc"><span class="pi">🫘</span><div class="pn"><span data-l="en">Pulses & Grains</span><span data-l="or">ଡାଲି ଓ ଶସ୍ୟ</span></div></div>
-      <div class="pc"><span class="pi">🫙</span><div class="pn"><span data-l="en">Cooking Oils</span><span data-l="or">ରୋଷେଇ ତେଲ</span></div></div>
-      <div class="pc"><span class="pi">🍿</span><div class="pn"><span data-l="en">Snacks & Biscuits</span><span data-l="or">ସ୍ନାକ୍ସ ଓ ବିସ୍କୁଟ</span></div></div>
-      <div class="pc"><span class="pi">☕</span><div class="pn"><span data-l="en">Beverages</span><span data-l="or">ପାନୀୟ</span></div></div>
-      <div class="pc"><span class="pi">🧼</span><div class="pn"><span data-l="en">Soaps & Household</span><span data-l="or">ସାବୁନ ଓ ଘରୋଇ ସାମଗ୍ରୀ</span></div></div>
-      <div class="pc"><span class="pi">🛒</span><div class="pn"><span data-l="en">General Daily Items</span><span data-l="or">ଦୈନନ୍ଦିନ ଜିନିଷ</span></div></div>
-      <div class="pc pc-hl"><span class="pi">📦</span><div class="pn"><span data-l="en">Wholesale Grocery</span><span data-l="or">ଥୋକ ଖାଦ୍ୟ ସାମଗ୍ରୀ</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Why Choose Us -->
-<section class="why" id="why-us">
-  <div class="container">
-    <span class="stag"><span data-l="en">Why Choose Us</span><span data-l="or">ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ</span></span>
-    <h2 class="stitle"><span data-l="en">The Manoj Kirana Difference</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋରର ବିଶେଷତ୍ୱ</span></h2>
-    <div class="div"></div>
-    <div class="wgrid">
-      <div class="wc"><div class="wi">🏆</div><div class="wt"><span data-l="en">Serving Since 2013</span><span data-l="or">୨୦୧୩ ଠାରୁ ସେବା</span></div></div>
-      <div class="wc"><div class="wi">⭐</div><div class="wt"><span data-l="en">5.0 Google Rating</span><span data-l="or">ଗୁଗଲ ୫.୦ ରେଟିଂ</span></div></div>
-      <div class="wc"><div class="wi">💰</div><div class="wt"><span data-l="en">Affordable Prices</span><span data-l="or">ସସ୍ତା ଓ ଉଚିତ ଦାମ</span></div></div>
-      <div class="wc"><div class="wi">🤝</div><div class="wt"><span data-l="en">Trusted Local Shop</span><span data-l="or">ବିଶ୍ୱସ୍ତ ସ୍ଥାନୀୟ ଦୋକାନ</span></div></div>
-      <div class="wc"><div class="wi">🕗</div><div class="wt"><span data-l="en">Open Daily 8 AM – 8 PM</span><span data-l="or">ସବୁଦିନ ସକାଳ ୮ – ରାତ୍ରି ୮</span></div></div>
-      <div class="wc"><div class="wi">📦</div><div class="wt"><span data-l="en">Wholesale Available</span><span data-l="or">ଥୋକ ଉପଲବ୍ଧ</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- Reviews -->
-<section class="reviews" id="reviews">
-  <div class="container">
-    <span class="stag"><span data-l="en">Customer Reviews</span><span data-l="or">ଗ୍ରାହକ ସମୀକ୍ଷା</span></span>
-    <h2 class="stitle"><span data-l="en">What Our Customers Say</span><span data-l="or">ଆମ ଗ୍ରାହକ କ'ଣ କହୁଛନ୍ତି</span></h2>
-    <div class="div"></div>
-    <div class="rdisp">
-      <div class="rnum">5.0</div>
-      <div>
-        <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
-        <div class="rcnt"><span data-l="en">Based on 7 Google Reviews</span><span data-l="or">7 ଗୁଗଲ ସମୀକ୍ଷା ଉପରେ ଆଧାରିତ</span></div>
-      </div>
-    </div>
-    <div class="rc">
-      <div class="rh">
-        <div class="rav">G</div>
-        <div>
-          <div class="rn"><span data-l="en">Google Reviewer</span><span data-l="or">ଗୁଗଲ ସମୀକ୍ଷକ</span></div>
-          <div class="stars" style="gap:2px"><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span></div>
-          <div class="rd"><span data-l="en">Verified Google Review</span><span data-l="or">ଯାଞ୍ଚ ହୋଇଥିବା ଗୁଗଲ ସମୀକ୍ଷା</span></div>
-        </div>
-      </div>
-      <p class="rt"><span data-l="en">"Very good so nice. All grocery are available here."</span><span data-l="or">"ବହୁତ ଭଲ। ଏଠି ସବୁ ପ୍ରକାର ଖାଦ୍ୟ ସାମଗ୍ରୀ ମିଳୁଛି।"</span></p>
-    </div>
-    <div class="rc">
-      <div class="rh">
-        <div class="rav" style="background:#fff3e0;color:var(--acc)">L</div>
-        <div>
-          <div class="rn"><span data-l="en">Local Customer</span><span data-l="or">ସ୍ଥାନୀୟ ଗ୍ରାହକ</span></div>
-          <div class="stars" style="gap:2px"><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span><span class="star" style="font-size:13px">★</span></div>
-        </div>
-      </div>
-      <p class="rt"><span data-l="en">"Manoj bhai always has everything we need. Fair prices and very helpful service!"</span><span data-l="or">"ମନୋଜ ଭାଇ ପାଖରେ ସବୁ ଜିନିଷ ମିଳୁଛି। ଉଚିତ ଦାମ ଓ ଆନ୍ତରିକ ସେବା!"</span></p>
-    </div>
-    <div style="text-align:center">
-      <a href="https://maps.google.com/?q=Manoj+Kirana+Store+Gungunia+Odisha" target="_blank" class="gbadge">🌐 <span data-l="en">View on Google Maps</span><span data-l="or">ଗୁଗଲ ମ୍ୟାପ ରେ ଦେଖନ୍ତୁ</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact">
-  <div class="container">
-    <span class="stag"><span data-l="en">Find Us</span><span data-l="or">ଆମକୁ ଖୋଜନ୍ତୁ</span></span>
-    <h2 class="stitle"><span data-l="en">Contact & Location</span><span data-l="or">ଯୋଗାଯୋଗ ଓ ଅବସ୍ଥାନ</span></h2>
-    <div class="div"></div>
-    <div class="cgrid">
-      <div class="ccard">
-        <div class="ci">
-          <div class="cicon">📍</div>
-          <div><div class="clbl"><span data-l="en">Address</span><span data-l="or">ଠିକଣା</span></div><div class="cval">JRF3+WHX, Gungunia,<br>Odisha 766017</div></div>
-        </div>
-        <div class="ci">
-          <div class="cicon">📞</div>
-          <div>
-            <div class="clbl"><span data-l="en">Phone</span><span data-l="or">ଫୋନ</span></div>
-            <div class="cval"><a href="tel:7873618898" class="clink">7873618898</a><br><a href="tel:7978567667" class="clink" style="color:var(--c600);font-size:13px">7978567667</a></div>
-          </div>
-        </div>
-        <div class="ci">
-          <div class="cicon">💬</div>
-          <div><div class="clbl">WhatsApp</div><div class="cval"><a href="https://wa.me/917873618898" target="_blank" class="clink">7873618898</a></div></div>
-        </div>
-        <div class="ci">
-          <div class="cicon">🕗</div>
-          <div>
-            <div class="clbl"><span data-l="en">Business Hours</span><span data-l="or">ଦୋକାନ ସମୟ</span></div>
-            <div class="cval"><span data-l="en">Monday – Sunday<br><strong>8:00 AM – 8:00 PM</strong></span><span data-l="or">ସୋମ – ରବିବାର<br><strong>ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦</strong></span></div>
-          </div>
-        </div>
-        <div class="ci">
-          <div class="cicon">🏪</div>
-          <div><div class="clbl"><span data-l="en">Category</span><span data-l="or">ଶ୍ରେଣୀ</span></div><div class="cval"><span data-l="en">Indian Grocery Store<br>Wholesale Available</span><span data-l="or">ଭାରତୀୟ ଖାଦ୍ୟ ଦୋକାନ<br>ଥୋକ ବ୍ୟବସ୍ଥା ଉପଲବ୍ଧ</span></div></div>
-        </div>
-      </div>
-      <div class="mapbox">
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d505.23382338056535!2d82.8038061!3d19.6247816!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2525f231adb4c9%3A0x88a116ff65042981!2sManoj%20Kirana%20Store!5e1!3m2!1sen!2sin!4v1772562686189!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </div>
-    </div>
-    <div class="cbtns">
-      <a href="tel:7873618898" class="btn btn-g">📞 <span data-l="en">Call Now</span><span data-l="or">ଏବେ କଲ</span></a>
-      <a href="https://wa.me/917978567667?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-wa">💬 <span data-l="en">WhatsApp</span><span data-l="or">ହ୍ୱାଟସ୍‌ଆପ</span></a>
-      <a href="https://maps.google.com/?q=JRF3+WHX,+Gungunia,+Odisha+766017" target="_blank" class="btn btn-dir">📍 <span data-l="en">Directions</span><span data-l="or">ଦିଗ ଦର୍ଶନ</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <div class="container">
-    <div class="flogo">🛒 <span data-l="en">Manoj Kirana Store</span><span data-l="or">ମନୋଜ କିରାଣା ଷ୍ଟୋର</span></div>
-    <div class="ftag"><span data-l="en">Serving Gungunia Since 2013</span><span data-l="or">୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆ ସେବାରେ</span></div>
-    <div class="ftag"><span data-l="en">Open Daily: 8:00 AM – 8:00 PM</span><span data-l="or">ସବୁଦିନ ଖୋଲା: ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦</span></div>
-    <div class="fdiv"></div>
-    <div class="ftag" style="font-size:12px">📍 <span data-l="en">JRF3+WHX, Gungunia, Odisha 766017</span><span data-l="or">JRF3+WHX, ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା ୭୬୬୦୧୭</span></div>
-    <div class="fdiv"></div>
-    <div class="fcopy"><span data-l="en">© 2026 Manoj Kirana Store. All Rights Reserved.</span><span data-l="or">© ୨୦୨୬ ମନୋଜ କିରାଣା ଷ୍ଟୋର। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।</span></div>
-  </div>
-</footer>
-
-<!-- WhatsApp Float -->
-<a href="https://wa.me/917873618898?text=Hello%20Manoj%20Kirana%20Store%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="wafloat" aria-label="Chat on WhatsApp">
-  <svg width="30" height="30" viewBox="0 0 32 32" fill="white"><path d="M16 3C9.37 3 4 8.37 4 15c0 2.39.83 4.59 2.24 6.35L4.5 28.5l7.32-1.73A11.94 11.94 0 0016 27c6.63 0 12-5.37 12-12S22.63 3 16 3zm5.89 16.66c-.25.7-1.47 1.37-2.02 1.43-.53.06-1.02.26-3.42-.71-2.88-1.17-4.72-4.1-4.86-4.29-.14-.19-1.17-1.56-1.17-2.97s.74-2.11 1.01-2.4c.27-.3.58-.37.77-.37l.55.01c.18.01.42-.07.65.5.24.57.81 1.97.88 2.12.07.14.12.31.02.5-.09.19-.14.3-.28.47-.14.16-.29.36-.41.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.21 1.36.28.14.44.12.6-.07.16-.19.69-.81.88-1.09.18-.28.37-.23.62-.14.25.09 1.61.76 1.88.9.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
-</a>
-
-<script>
-function setLang(l){
-  const b=document.body,en=document.getElementById('ben'),or=document.getElementById('bor');
-  if(l==='or'){
-    b.classList.add('lang-or');b.setAttribute('lang','or');
-    en.classList.remove('active');or.classList.add('active');
-    document.title='ମନୋଜ କିରାଣା ଷ୍ଟୋର – ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା';
-  } else {
-    b.classList.remove('lang-or');b.setAttribute('lang','en');
-    en.classList.add('active');or.classList.remove('active');
-    document.title='Manoj Kirana Store – Grocery Store in Gungunia';
-  }
-}
-
-// Mobile menu
-const hbg=document.getElementById('hbg'),mm=document.getElementById('mm'),mcl=document.getElementById('mcl');
-function cmm(){mm.classList.remove('open');document.body.style.overflow=''}
-hbg.addEventListener('click',()=>{mm.classList.add('open');document.body.style.overflow='hidden'});
-mcl.addEventListener('click',cmm);
-mm.addEventListener('click',e=>{if(e.target===mm)cmm()});
-
-// Open/closed badge
-(function(){
-  const now=new Date(),h=now.getHours(),m=now.getMinutes(),t=h*60+m;
-  const badges=document.querySelectorAll('.openbadge');
-  if(t<480||t>=1200){
-    badges.forEach(b=>{
-      b.style.background='rgba(255,80,80,.25)';
-      b.querySelector('.dot').style.background='#ff6b6b';
-      const s=b.querySelectorAll('span[data-l]');
-      s.forEach(sp=>{sp.textContent=sp.getAttribute('data-l')==='en'?'Closed Now':'ବନ୍ଦ ଅଛି'});
-    });
-  }
-})();
-</script>
+  <script src="script.js"></script>
 </body>
 </html>
