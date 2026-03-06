@@ -13,8 +13,8 @@
 # 📸 Website Preview
 
 <p align="center">
-  <img src="assets/screenshots/hero2.png" width="600">
-  <img src="assets/screenshots/mobile.png" width="200">
+  <img src="assets/screenshots/hero2.png" width="300">
+  <img src="assets/screenshots/mobile.png" width="300">
 </p>
 
 
