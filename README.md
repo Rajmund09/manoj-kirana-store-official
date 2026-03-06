@@ -14,15 +14,11 @@
 
 ### Desktop View
 
-![Desktop Preview](assets/screenshots/hero.png)
+![Desktop Preview](assets/screenshots/hero2.png)
 
 ### Mobile View
 
 ![Mobile Preview](assets/screenshots/mobile.png)
-
-### Products Section
-
-![Products](assets/screenshots/products.png)
 
 
 A modern **mobile-first bilingual website** built for **Manoj Kirana Store**, a trusted local grocery shop serving the community of **Gungunia, Odisha** since **2013**.
