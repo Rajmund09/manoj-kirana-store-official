@@ -12,66 +12,66 @@ const TRANSLATIONS = {
 
   en: {
     /* Utility Bar */
-    utilityText:   "Welcome to Manoj Kirana Store — Gungunia's trusted grocery shop since 2013",
-    utilityHours:  "Open Daily: 8AM – 8PM",
+    utilityText: "Welcome to Manoj Kirana Store — Gungunia's trusted grocery shop since 2013",
+    utilityHours: "Open Daily: 8AM – 8PM",
 
     /* Nav */
-    brandName:     "Manoj Kirana Store",
-    brandSub:      "Gungunia, Odisha",
-    navAbout:      "About",
-    navProducts:   "Products",
-    navWhy:        "Why Us",
-    navReviews:    "Reviews",
-    navContact:    "Contact",
-    callNow:       "Call Now",
-    selectLang:    "Select Language",
+    brandName: "Manoj Kirana Store",
+    brandSub: "Gungunia, Odisha",
+    navAbout: "About",
+    navProducts: "Products",
+    navWhy: "Why Us",
+    navReviews: "Reviews",
+    navContact: "Contact",
+    callNow: "Call Now",
+    selectLang: "Select Language",
 
     /* Buttons */
-    whatsappOrder:    "WhatsApp Order",
-    getDirections:    "Get Directions",
+    whatsappOrder: "WhatsApp Order",
+    getDirections: "Get Directions",
     wholesaleEnquiry: "Enquire About Wholesale",
 
     /* Status */
-    openNow:   "Open Now",
+    openNow: "Open Now",
     closedNow: "Closed Now",
     ratingBadge: "5.0 Rating on Google",
 
     /* Hero */
-    heroLine1:  "Your Trusted Grocery Store",
-    heroLine2:  "in Gungunia — Since 2013",
-    heroSub:    "🌾 Fresh Groceries · 🏠 Daily Essentials · 📦 Wholesale Available · 😊 Friendly Service",
-    statYears:  "Years Serving",
+    heroLine1: "Your Trusted Grocery Store",
+    heroLine2: "in Gungunia — Since 2013",
+    heroSub: "🌾 Fresh Groceries · 🏠 Daily Essentials · 📦 Wholesale Available · 😊 Friendly Service",
+    statYears: "Years Serving",
     statRating: "Google Rating",
-    statHoursNum:   "8AM–8PM",
+    statHoursNum: "8AM–8PM",
     statHoursLabel: "Open Daily",
 
     /* Hero Cards */
-    cardFresh:     "Fresh Groceries",
+    cardFresh: "Fresh Groceries",
     cardWholesale: "Wholesale Available",
-    cardWhatsapp:  "Order on WhatsApp",
+    cardWhatsapp: "Order on WhatsApp",
 
     /* About */
-    aboutTag:   "Our Story",
+    aboutTag: "Our Story",
     aboutTitle: "A Trusted Name in Gungunia",
-    aboutDesc:  "Serving every family in Gungunia with fresh groceries and honest prices for over 11 years.",
+    aboutDesc: "Serving every family in Gungunia with fresh groceries and honest prices for over 11 years.",
     aboutStory: "Since 2013, Manoj Kirana Store has been the heartbeat of Gungunia's daily life. Owner Manoj Mund started this humble shop with a simple promise — fresh groceries, everyday essentials, and honest service to every family in our community. What began as a small kirana has grown into a beloved local institution. Whether you need rice for dinner, oil for cooking, or supplies in bulk — we are here for you, open every single day from 8 AM to 8 PM. We proudly serve wholesale buyers too, making us the go-to store for families and small businesses alike.",
     ownerLabel: "Owner & Founder",
 
-    hlEst:        "Established",
-    hlRating:     "Google Rating",
+    hlEst: "Established",
+    hlRating: "Google Rating",
     hlWholesaleNum: "✓",
-    hlWholesale:  "Wholesale Available",
-    hlOpen:       "Open Every Day",
-    hlFamilyNum:  "👨‍👩‍👧",
-    hlFamily:     "Family-Run Shop",
-    hlPriceNum:   "₹",
-    hlPrice:      "Affordable Prices",
+    hlWholesale: "Wholesale Available",
+    hlOpen: "Open Every Day",
+    hlFamilyNum: "👨‍👩‍👧",
+    hlFamily: "Family-Run Shop",
+    hlPriceNum: "₹",
+    hlPrice: "Affordable Prices",
 
     /* Products */
-    productsTag:   "What We Offer",
+    productsTag: "What We Offer",
     productsTitle: "Our Product Categories",
-    productsDesc:  "Everything your household needs — fresh, affordable, and always in stock.",
-    prodBadge:     "Popular",
+    productsDesc: "Everything your household needs — fresh, affordable, and always in stock.",
+    prodBadge: "Popular",
 
     prod1Name: "Rice & Atta",
     prod1Desc: "Premium quality rice & wheat flour for daily cooking",
@@ -91,25 +91,25 @@ const TRANSLATIONS = {
     prod8Desc: "Bulk purchase available for businesses & homes",
 
     /* Why Us */
-    whyTag:   "Why Choose Us",
+    whyTag: "Why Choose Us",
     whyTitle: "The Manoj Kirana Difference",
-    whyDesc:  "We've earned the trust of Gungunia's families through consistent quality and service.",
+    whyDesc: "We've earned the trust of Gungunia's families through consistent quality and service.",
 
     why1Title: "Serving Since 2013",
-    why1Desc:  "Over 11 years of trusted service to Gungunia's community.",
+    why1Desc: "Over 11 years of trusted service to Gungunia's community.",
     why2Title: "5.0 Google Rating",
-    why2Desc:  "Perfect 5-star rating based on customer reviews.",
+    why2Desc: "Perfect 5-star rating based on customer reviews.",
     why3Title: "Affordable Prices",
-    why3Desc:  "Fair and transparent pricing on every product.",
+    why3Desc: "Fair and transparent pricing on every product.",
     why4Title: "Trusted Local Shop",
-    why4Desc:  "A family-run store that feels like home to every customer.",
+    why4Desc: "A family-run store that feels like home to every customer.",
     why5Title: "Open Daily 8AM–8PM",
-    why5Desc:  "We are open every day of the year, no holidays.",
+    why5Desc: "We are open every day of the year, no holidays.",
     why6Title: "Wholesale Available",
-    why6Desc:  "Bulk orders welcomed for homes and small businesses.",
+    why6Desc: "Bulk orders welcomed for homes and small businesses.",
 
     /* Reviews */
-    reviewsTag:   "Customer Reviews",
+    reviewsTag: "Customer Reviews",
     reviewsTitle: "What Our Customers Say",
     reviewsCount: "Based on 7 Google Reviews",
     viewOnGoogle: "View on Google Maps",
@@ -122,77 +122,77 @@ const TRANSLATIONS = {
     review3Text: "Best kirana store in Gungunia. Very reasonable prices and fresh stock every day. We have been coming here for years.",
 
     /* Contact */
-    contactTag:   "Find Us",
+    contactTag: "Find Us",
     contactTitle: "Contact & Location",
-    contactDesc:  "Visit us in Gungunia, call, or order on WhatsApp — we are always ready to serve you.",
+    contactDesc: "Visit us in Gungunia, call, or order on WhatsApp — we are always ready to serve you.",
     labelAddress: "Address",
-    labelPhone:   "Phone",
-    labelHours:   "Business Hours",
-    hoursLine1:   "Monday – Sunday",
-    hoursLine2:   "8:00 AM – 8:00 PM",
+    labelPhone: "Phone",
+    labelHours: "Business Hours",
+    hoursLine1: "Monday – Sunday",
+    hoursLine2: "8:00 AM – 8:00 PM",
 
     /* Footer */
-    footerDesc:   "Your trusted local grocery store in Gungunia, Odisha. Fresh groceries, daily essentials and wholesale — since 2013.",
-    footerHours:  "Open Daily: 8:00 AM – 8:00 PM",
-    footerCopy:   "© 2026 Manoj Kirana Store. All Rights Reserved.",
+    footerDesc: "Your trusted local grocery store in Gungunia, Odisha. Fresh groceries, daily essentials and wholesale — since 2013.",
+    footerHours: "Open Daily: 8:00 AM – 8:00 PM",
+    footerCopy: "© 2026 Manoj Kirana Store. All Rights Reserved.",
     footerMadeIn: "Made with ♥ in Gungunia, Odisha",
   },
 
   /* ─────────────────── ODIA ─────────────────── */
   or: {
-    utilityText:   "ମନୋଜ କିରାଣା ଷ୍ଟୋରରେ ସ୍ୱାଗତ — ୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆର ବିଶ୍ୱସ୍ତ ଦୋକାନ",
-    utilityHours:  "ସବୁଦିନ ଖୋଲା: ସକାଳ ୮ – ରାତ୍ରି ୮",
+    utilityText: "ମନୋଜ କିରାଣା ଷ୍ଟୋରରେ ସ୍ୱାଗତ — ୨୦୧୩ ଠାରୁ ଗୁଙ୍ଗୁନିଆର ବିଶ୍ୱସ୍ତ ଦୋକାନ",
+    utilityHours: "ସବୁଦିନ ଖୋଲା: ସକାଳ ୮ – ରାତ୍ରି ୮",
 
-    brandName:   "ମନୋଜ କିରାଣା ଷ୍ଟୋର",
-    brandSub:    "ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା",
-    navAbout:    "ଆମ ବିଷୟରେ",
+    brandName: "ମନୋଜ କିରାଣା ଷ୍ଟୋର",
+    brandSub: "ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶା",
+    navAbout: "ଆମ ବିଷୟରେ",
     navProducts: "ସାମଗ୍ରୀ",
-    navWhy:      "ଆମ ବିଶେଷତ୍ୱ",
-    navReviews:  "ସମୀକ୍ଷା",
-    navContact:  "ଯୋଗାଯୋଗ",
-    callNow:     "ଏବେ କଲ କରନ୍ତୁ",
-    selectLang:  "ଭାଷା ବାଛନ୍ତୁ",
+    navWhy: "ଆମ ବିଶେଷତ୍ୱ",
+    navReviews: "ସମୀକ୍ଷା",
+    navContact: "ଯୋଗାଯୋଗ",
+    callNow: "ଏବେ କଲ କରନ୍ତୁ",
+    selectLang: "ଭାଷା ବାଛନ୍ତୁ",
 
-    whatsappOrder:    "ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର",
-    getDirections:    "ଦିଗ ଖୋଜନ୍ତୁ",
+    whatsappOrder: "ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର",
+    getDirections: "ଦିଗ ଖୋଜନ୍ତୁ",
     wholesaleEnquiry: "ଥୋକ ବିଷୟରେ ଜାଣନ୍ତୁ",
 
-    openNow:     "ଖୋଲା ଅଛି",
-    closedNow:   "ବନ୍ଦ ଅଛି",
+    openNow: "ଖୋଲା ଅଛି",
+    closedNow: "ବନ୍ଦ ଅଛି",
     ratingBadge: "ଗୁଗଲ ରେ ୫.୦ ରେଟିଂ",
 
-    heroLine1:  "ଆପଣଙ୍କ ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ",
-    heroLine2:  "ଗୁଙ୍ଗୁନିଆ — ୨୦୧୩ ଠାରୁ",
-    heroSub:    "🌾 ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ · 🏠 ଦୈନନ୍ଦିନ ଜରୁରୀ · 📦 ଥୋକ ଉପଲବ୍ଧ · 😊 ଆନ୍ତରିକ ସେବା",
-    statYears:  "ବର୍ଷ ସେବା",
+    heroLine1: "ଆପଣଙ୍କ ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ",
+    heroLine2: "ଗୁଙ୍ଗୁନିଆ — ୨୦୧୩ ଠାରୁ",
+    heroSub: "🌾 ସତେଜ ଖାଦ୍ୟ ସାମଗ୍ରୀ · 🏠 ଦୈନନ୍ଦିନ ଜରୁରୀ · 📦 ଥୋକ ଉପଲବ୍ଧ · 😊 ଆନ୍ତରିକ ସେବା",
+    statYears: "ବର୍ଷ ସେବା",
     statRating: "ଗୁଗଲ ରେଟିଂ",
-    statHoursNum:   "ସ.୮–ରା.୮",
+    statHoursNum: "ସ.୮–ରା.୮",
     statHoursLabel: "ସବୁଦିନ ଖୋଲା",
 
-    cardFresh:     "ସତେଜ ଖାଦ୍ୟ",
+    cardFresh: "ସତେଜ ଖାଦ୍ୟ",
     cardWholesale: "ଥୋକ ଉପଲବ୍ଧ",
-    cardWhatsapp:  "ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର",
+    cardWhatsapp: "ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର",
 
-    aboutTag:   "ଆମ କଥା",
+    aboutTag: "ଆମ କଥା",
     aboutTitle: "ଗୁଙ୍ଗୁନିଆର ଏକ ବିଶ୍ୱସ୍ତ ନାମ",
-    aboutDesc:  "୧୧ ବର୍ଷରୁ ଅଧିକ ସମୟ ଧରି ଗୁଙ୍ଗୁନିଆର ପ୍ରତ୍ୟେକ ପରିବାରକୁ ସତେଜ ଖାଦ୍ୟ ଓ ଉଚିତ ଦାମ ସହ ସେବା।",
+    aboutDesc: "୧୧ ବର୍ଷରୁ ଅଧିକ ସମୟ ଧରି ଗୁଙ୍ଗୁନିଆର ପ୍ରତ୍ୟେକ ପରିବାରକୁ ସତେଜ ଖାଦ୍ୟ ଓ ଉଚିତ ଦାମ ସହ ସେବା।",
     aboutStory: "୨୦୧୩ ଠାରୁ, ମନୋଜ କିରାଣା ଷ୍ଟୋର ଗୁଙ୍ଗୁନିଆର ଦୈନନ୍ଦିନ ଜୀବନର ଏକ ଅଂଶ ହୋଇ ଆସୁଛି। ମାଲିକ ମନୋଜ ମୁଣ୍ଡ ଏକ ସରଳ ପ୍ରତିଶ୍ରୁତି ସହ ଏହି ଦୋକାନ ଆରମ୍ଭ କଲେ — ସୁଲଭ ମୂଲ୍ୟରେ ସତେଜ ଖାଦ୍ୟ ଓ ଆନ୍ତରିକ ସେବା। ଛୋଟ ଏକ କିରାଣା ଦୋକାନ ଭାବରେ ଆରମ୍ଭ ହୋଇ, ଆଜି ଏହା ଗୁଙ୍ଗୁନିଆର ସବୁ ପରିବାରର ପ୍ରିୟ ସ୍ଥାନ। ଆପଣ ଚାଉଳ, ତେଲ ବା ଥୋକ ସାମଗ୍ରୀ — ଯାହା ଦରକାର, ଆମେ ସବୁଦିନ ସକାଳ ୮ ଟାରୁ ରାତ୍ରି ୮ ଟା ପର୍ଯ୍ୟନ୍ତ ଖୋଲା ଅଛୁ।",
     ownerLabel: "ମାଲିକ ଓ ପ୍ରତିଷ୍ଠାତା",
 
-    hlEst:        "ପ୍ରତିଷ୍ଠା ବର୍ଷ",
-    hlRating:     "ଗୁଗଲ ରେଟିଂ",
+    hlEst: "ପ୍ରତିଷ୍ଠା ବର୍ଷ",
+    hlRating: "ଗୁଗଲ ରେଟିଂ",
     hlWholesaleNum: "✓",
-    hlWholesale:  "ଥୋକ ଉପଲବ୍ଧ",
-    hlOpen:       "ସବୁଦିନ ଖୋଲା",
-    hlFamilyNum:  "👨‍👩‍👧",
-    hlFamily:     "ପାରିବାରିକ ଦୋକାନ",
-    hlPriceNum:   "₹",
-    hlPrice:      "ଉଚିତ ଦାମ",
+    hlWholesale: "ଥୋକ ଉପଲବ୍ଧ",
+    hlOpen: "ସବୁଦିନ ଖୋଲା",
+    hlFamilyNum: "👨‍👩‍👧",
+    hlFamily: "ପାରିବାରିକ ଦୋକାନ",
+    hlPriceNum: "₹",
+    hlPrice: "ଉଚିତ ଦାମ",
 
-    productsTag:   "ଆମ ସାମଗ୍ରୀ",
+    productsTag: "ଆମ ସାମଗ୍ରୀ",
     productsTitle: "ଆମ ଉତ୍ପାଦ ବିଭାଗ",
-    productsDesc:  "ଆପଣଙ୍କ ଘର ପାଇଁ ସବୁ ଜିନିଷ — ସତେଜ, ସସ୍ତା ଓ ସବୁବେଳେ ଉପଲବ୍ଧ।",
-    prodBadge:     "ଲୋକପ୍ରିୟ",
+    productsDesc: "ଆପଣଙ୍କ ଘର ପାଇଁ ସବୁ ଜିନିଷ — ସତେଜ, ସସ୍ତା ଓ ସବୁବେଳେ ଉପଲବ୍ଧ।",
+    prodBadge: "ଲୋକପ୍ରିୟ",
 
     prod1Name: "ଚାଉଳ ଓ ଆଟା",
     prod1Desc: "ଦୈନନ୍ଦିନ ରୋଷେଇ ପାଇଁ ଉଚ୍ଚ ମାନର ଚାଉଳ ଓ ଗହମ ଆଟା",
@@ -211,24 +211,24 @@ const TRANSLATIONS = {
     prod8Name: "ଥୋକ ଖାଦ୍ୟ ସାମଗ୍ରୀ",
     prod8Desc: "ଘର ଓ ବ୍ୟବସାୟ ପାଇଁ ଥୋକ ସାମଗ୍ରୀ ଉପଲବ୍ଧ",
 
-    whyTag:   "ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ",
+    whyTag: "ଆମକୁ କାହିଁକି ବାଛନ୍ତୁ",
     whyTitle: "ମନୋଜ କିରାଣା ଷ୍ଟୋରର ବିଶେଷତ୍ୱ",
-    whyDesc:  "ନିରନ୍ତର ଗୁଣ ଓ ସେବା ମାଧ୍ୟମରେ ଗୁଙ୍ଗୁନିଆ ପରିବାରଙ୍କ ବିଶ୍ୱାସ ଅର୍ଜନ।",
+    whyDesc: "ନିରନ୍ତର ଗୁଣ ଓ ସେବା ମାଧ୍ୟମରେ ଗୁଙ୍ଗୁନିଆ ପରିବାରଙ୍କ ବିଶ୍ୱାସ ଅର୍ଜନ।",
 
     why1Title: "୨୦୧୩ ଠାରୁ ସେବା",
-    why1Desc:  "ଗୁଙ୍ଗୁନିଆ ସମୁଦାୟକୁ ୧୧ ବର୍ଷ ଧରି ବିଶ୍ୱସ୍ତ ସେବା।",
+    why1Desc: "ଗୁଙ୍ଗୁନିଆ ସମୁଦାୟକୁ ୧୧ ବର୍ଷ ଧରି ବିଶ୍ୱସ୍ତ ସେବା।",
     why2Title: "ଗୁଗଲ ୫.୦ ରେଟିଂ",
-    why2Desc:  "ଗ୍ରାହକ ସମୀକ୍ଷା ଆଧାରରେ ସମ୍ପୂର୍ଣ ୫ ତାରା।",
+    why2Desc: "ଗ୍ରାହକ ସମୀକ୍ଷା ଆଧାରରେ ସମ୍ପୂର୍ଣ ୫ ତାରା।",
     why3Title: "ଉଚିତ ଦାମ",
-    why3Desc:  "ପ୍ରତ୍ୟେକ ଜିନିଷରେ ନ୍ୟାୟ ଓ ସ୍ୱଚ୍ଛ ମୂଲ୍ୟ।",
+    why3Desc: "ପ୍ରତ୍ୟେକ ଜିନିଷରେ ନ୍ୟାୟ ଓ ସ୍ୱଚ୍ଛ ମୂଲ୍ୟ।",
     why4Title: "ବିଶ୍ୱସ୍ତ ଦୋକାନ",
-    why4Desc:  "ପ୍ରତ୍ୟେକ ଗ୍ରାହକଙ୍କ ପାଇଁ ଘର ଭଳି ଅନୁଭବ।",
+    why4Desc: "ପ୍ରତ୍ୟେକ ଗ୍ରାହକଙ୍କ ପାଇଁ ଘର ଭଳି ଅନୁଭବ।",
     why5Title: "ସ.୮–ରା.୮ ଖୋଲା",
-    why5Desc:  "ଆମେ ବର୍ଷ ଦ୍ୱାଦଶ ମାସ ପ୍ରତ୍ୟେକ ଦିନ ଖୋଲା।",
+    why5Desc: "ଆମେ ବର୍ଷ ଦ୍ୱାଦଶ ମାସ ପ୍ରତ୍ୟେକ ଦିନ ଖୋଲା।",
     why6Title: "ଥୋକ ଉପଲବ୍ଧ",
-    why6Desc:  "ଘର ଓ ଛୋଟ ବ୍ୟବସାୟ ପାଇଁ ଥୋକ ଅର୍ଡ଼ର ଗ୍ରହଣ।",
+    why6Desc: "ଘର ଓ ଛୋଟ ବ୍ୟବସାୟ ପାଇଁ ଥୋକ ଅର୍ଡ଼ର ଗ୍ରହଣ।",
 
-    reviewsTag:   "ଗ୍ରାହକ ସମୀକ୍ଷା",
+    reviewsTag: "ଗ୍ରାହକ ସମୀକ୍ଷା",
     reviewsTitle: "ଆମ ଗ୍ରାହକ କ'ଣ କହୁଛନ୍ତି",
     reviewsCount: "7 ଗୁଗଲ ସମୀକ୍ଷା ଉପରେ ଆଧାରିତ",
     viewOnGoogle: "ଗୁଗଲ ମ୍ୟାପ ରେ ଦେଖନ୍ତୁ",
@@ -240,76 +240,76 @@ const TRANSLATIONS = {
     review3Name: "ନିୟମିତ ଗ୍ରାହକ",
     review3Text: "ଗୁଙ୍ଗୁନିଆର ସବୁଠୁ ଭଲ ଦୋକାନ। ପ୍ରତିଦିନ ସତେଜ ଜିନିଷ ଓ ବହୁତ ଯୁକ୍ତିଯୁକ୍ତ ଦାମ।",
 
-    contactTag:   "ଆମକୁ ଖୋଜନ୍ତୁ",
+    contactTag: "ଆମକୁ ଖୋଜନ୍ତୁ",
     contactTitle: "ଯୋଗାଯୋଗ ଓ ଅବସ୍ଥାନ",
-    contactDesc:  "ଗୁଙ୍ଗୁନିଆ ଆସନ୍ତୁ, ଫୋନ ବା ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର — ଆମେ ସର୍ବଦା ସେବା ପ୍ରସ୍ତୁତ।",
+    contactDesc: "ଗୁଙ୍ଗୁନିଆ ଆସନ୍ତୁ, ଫୋନ ବା ହ୍ୱାଟସ୍‌ଆପ ଅର୍ଡ଼ର — ଆମେ ସର୍ବଦା ସେବା ପ୍ରସ୍ତୁତ।",
     labelAddress: "ଠିକଣା",
-    labelPhone:   "ଫୋନ",
-    labelHours:   "ଦୋକାନ ସମୟ",
-    hoursLine1:   "ସୋମ – ରବିବାର",
-    hoursLine2:   "ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦",
+    labelPhone: "ଫୋନ",
+    labelHours: "ଦୋକାନ ସମୟ",
+    hoursLine1: "ସୋମ – ରବିବାର",
+    hoursLine2: "ସକାଳ ୮:୦୦ – ରାତ୍ରି ୮:୦୦",
 
-    footerDesc:   "ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶାର ଆପଣଙ୍କ ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ। ୨୦୧୩ ଠାରୁ ସତେଜ ଜିନିଷ ଓ ଥୋକ ବ୍ୟବସ୍ଥା।",
-    footerHours:  "ସବୁଦିନ ଖୋଲା: ସ.୮:୦୦ – ରା.୮:୦୦",
-    footerCopy:   "© ୨୦୨୬ ମନୋଜ କିରାଣା ଷ୍ଟୋର। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।",
+    footerDesc: "ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶାର ଆପଣଙ୍କ ବିଶ୍ୱସ୍ତ କିରାଣା ଦୋକାନ। ୨୦୧୩ ଠାରୁ ସତେଜ ଜିନିଷ ଓ ଥୋକ ବ୍ୟବସ୍ଥା।",
+    footerHours: "ସବୁଦିନ ଖୋଲା: ସ.୮:୦୦ – ରା.୮:୦୦",
+    footerCopy: "© ୨୦୨୬ ମନୋଜ କିରାଣା ଷ୍ଟୋର। ସମସ୍ତ ଅଧିକାର ସଂରକ୍ଷିତ।",
     footerMadeIn: "ଗୁଙ୍ଗୁନିଆ, ଓଡ଼ିଶାରେ ♥ ସହ ତିଆରି",
   },
 
   /* ─────────────────── HINDI ─────────────────── */
   hi: {
-    utilityText:   "मनोज किराना स्टोर में आपका स्वागत है — 2013 से गुंगुनिया का विश्वसनीय किराना",
-    utilityHours:  "रोज़ खुला: सुबह 8 – रात 8",
+    utilityText: "मनोज किराना स्टोर में आपका स्वागत है — 2013 से गुंगुनिया का विश्वसनीय किराना",
+    utilityHours: "रोज़ खुला: सुबह 8 – रात 8",
 
-    brandName:   "मनोज किराना स्टोर",
-    brandSub:    "गुंगुनिया, ओडिशा",
-    navAbout:    "हमारे बारे में",
+    brandName: "मनोज किराना स्टोर",
+    brandSub: "गुंगुनिया, ओडिशा",
+    navAbout: "हमारे बारे में",
     navProducts: "सामान",
-    navWhy:      "क्यों चुनें",
-    navReviews:  "समीक्षा",
-    navContact:  "संपर्क",
-    callNow:     "अभी कॉल करें",
-    selectLang:  "भाषा चुनें",
+    navWhy: "क्यों चुनें",
+    navReviews: "समीक्षा",
+    navContact: "संपर्क",
+    callNow: "अभी कॉल करें",
+    selectLang: "भाषा चुनें",
 
-    whatsappOrder:    "WhatsApp ऑर्डर",
-    getDirections:    "रास्ता देखें",
+    whatsappOrder: "WhatsApp ऑर्डर",
+    getDirections: "रास्ता देखें",
     wholesaleEnquiry: "थोक के बारे में पूछें",
 
-    openNow:     "अभी खुला है",
-    closedNow:   "अभी बंद है",
+    openNow: "अभी खुला है",
+    closedNow: "अभी बंद है",
     ratingBadge: "Google पर 5.0 रेटिंग",
 
-    heroLine1:  "आपका विश्वसनीय किराना स्टोर",
-    heroLine2:  "गुंगुनिया में — 2013 से",
-    heroSub:    "🌾 ताज़ा किराना · 🏠 रोज़मर्रा की ज़रूरतें · 📦 थोक उपलब्ध · 😊 मैत्रीपूर्ण सेवा",
-    statYears:  "साल की सेवा",
+    heroLine1: "आपका विश्वसनीय किराना स्टोर",
+    heroLine2: "गुंगुनिया में — 2013 से",
+    heroSub: "🌾 ताज़ा किराना · 🏠 रोज़मर्रा की ज़रूरतें · 📦 थोक उपलब्ध · 😊 मैत्रीपूर्ण सेवा",
+    statYears: "साल की सेवा",
     statRating: "Google रेटिंग",
-    statHoursNum:   "सु.8–रा.8",
+    statHoursNum: "सु.8–रा.8",
     statHoursLabel: "रोज़ खुला",
 
-    cardFresh:     "ताज़ा किराना",
+    cardFresh: "ताज़ा किराना",
     cardWholesale: "थोक उपलब्ध",
-    cardWhatsapp:  "WhatsApp ऑर्डर",
+    cardWhatsapp: "WhatsApp ऑर्डर",
 
-    aboutTag:   "हमारी कहानी",
+    aboutTag: "हमारी कहानी",
     aboutTitle: "गुंगुनिया में एक विश्वसनीय नाम",
-    aboutDesc:  "11 साल से अधिक समय से गुंगुनिया के हर परिवार को ताज़ा किराना और उचित कीमत पर सेवा।",
+    aboutDesc: "11 साल से अधिक समय से गुंगुनिया के हर परिवार को ताज़ा किराना और उचित कीमत पर सेवा।",
     aboutStory: "2013 से, मनोज किराना स्टोर गुंगुनिया की रोज़मर्रा की ज़िंदगी का हिस्सा बन गया है। मालिक मनोज मुंड ने एक सरल वादे के साथ यह दुकान शुरू की — ताज़ा किराना, रोज़ की ज़रूरतें और हर परिवार को ईमानदार सेवा। एक छोटे किराने की दुकान से शुरू होकर, यह आज गुंगुनिया का प्रिय स्थान बन गई है। चाहे चावल हो, तेल हो या थोक सामान — हम हर दिन सुबह 8 से रात 8 बजे तक आपके लिए हाज़िर हैं।",
     ownerLabel: "मालिक और संस्थापक",
 
-    hlEst:        "स्थापना वर्ष",
-    hlRating:     "Google रेटिंग",
+    hlEst: "स्थापना वर्ष",
+    hlRating: "Google रेटिंग",
     hlWholesaleNum: "✓",
-    hlWholesale:  "थोक उपलब्ध",
-    hlOpen:       "हर दिन खुला",
-    hlFamilyNum:  "👨‍👩‍👧",
-    hlFamily:     "पारिवारिक दुकान",
-    hlPriceNum:   "₹",
-    hlPrice:      "किफ़ायती कीमतें",
+    hlWholesale: "थोक उपलब्ध",
+    hlOpen: "हर दिन खुला",
+    hlFamilyNum: "👨‍👩‍👧",
+    hlFamily: "पारिवारिक दुकान",
+    hlPriceNum: "₹",
+    hlPrice: "किफ़ायती कीमतें",
 
-    productsTag:   "हम क्या बेचते हैं",
+    productsTag: "हम क्या बेचते हैं",
     productsTitle: "हमारी उत्पाद श्रेणियाँ",
-    productsDesc:  "आपके घर की हर ज़रूरत — ताज़ा, किफ़ायती और हमेशा उपलब्ध।",
-    prodBadge:     "लोकप्रिय",
+    productsDesc: "आपके घर की हर ज़रूरत — ताज़ा, किफ़ायती और हमेशा उपलब्ध।",
+    prodBadge: "लोकप्रिय",
 
     prod1Name: "चावल और आटा",
     prod1Desc: "रोज़ाना खाना पकाने के लिए उच्च गुणवत्ता का चावल और गेहूँ का आटा",
@@ -328,24 +328,24 @@ const TRANSLATIONS = {
     prod8Name: "थोक किराना",
     prod8Desc: "घरों और व्यवसायों के लिए थोक खरीदारी उपलब्ध",
 
-    whyTag:   "हमें क्यों चुनें",
+    whyTag: "हमें क्यों चुनें",
     whyTitle: "मनोज किराना का फ़र्क",
-    whyDesc:  "लगातार गुणवत्ता और सेवा से गुंगुनिया के परिवारों का विश्वास जीता।",
+    whyDesc: "लगातार गुणवत्ता और सेवा से गुंगुनिया के परिवारों का विश्वास जीता।",
 
     why1Title: "2013 से सेवा में",
-    why1Desc:  "गुंगुनिया समुदाय को 11 साल से भरोसेमंद सेवा।",
+    why1Desc: "गुंगुनिया समुदाय को 11 साल से भरोसेमंद सेवा।",
     why2Title: "Google 5.0 रेटिंग",
-    why2Desc:  "ग्राहक समीक्षाओं के आधार पर पूर्ण 5 सितारे।",
+    why2Desc: "ग्राहक समीक्षाओं के आधार पर पूर्ण 5 सितारे।",
     why3Title: "किफ़ायती कीमतें",
-    why3Desc:  "हर उत्पाद पर उचित और पारदर्शी मूल्य।",
+    why3Desc: "हर उत्पाद पर उचित और पारदर्शी मूल्य।",
     why4Title: "विश्वसनीय दुकान",
-    why4Desc:  "हर ग्राहक को घर जैसा एहसास देने वाली पारिवारिक दुकान।",
+    why4Desc: "हर ग्राहक को घर जैसा एहसास देने वाली पारिवारिक दुकान।",
     why5Title: "रोज़ सुबह 8 – रात 8",
-    why5Desc:  "हम साल के हर दिन बिना छुट्टी के खुले रहते हैं।",
+    why5Desc: "हम साल के हर दिन बिना छुट्टी के खुले रहते हैं।",
     why6Title: "थोक उपलब्ध",
-    why6Desc:  "घरों और छोटे व्यवसायों के लिए थोक ऑर्डर।",
+    why6Desc: "घरों और छोटे व्यवसायों के लिए थोक ऑर्डर।",
 
-    reviewsTag:   "ग्राहक समीक्षाएँ",
+    reviewsTag: "ग्राहक समीक्षाएँ",
     reviewsTitle: "हमारे ग्राहक क्या कहते हैं",
     reviewsCount: "7 Google समीक्षाओं पर आधारित",
     viewOnGoogle: "Google Maps पर देखें",
@@ -357,18 +357,18 @@ const TRANSLATIONS = {
     review3Name: "नियमित ग्राहक",
     review3Text: "गुंगुनिया का सबसे अच्छा किराना। हर दिन ताज़ा सामान और बहुत वाजिब कीमत। हम वर्षों से यहाँ आ रहे हैं।",
 
-    contactTag:   "हमें खोजें",
+    contactTag: "हमें खोजें",
     contactTitle: "संपर्क और स्थान",
-    contactDesc:  "गुंगुनिया आएं, कॉल करें, या WhatsApp ऑर्डर करें — हम हमेशा आपकी सेवा के लिए तैयार हैं।",
+    contactDesc: "गुंगुनिया आएं, कॉल करें, या WhatsApp ऑर्डर करें — हम हमेशा आपकी सेवा के लिए तैयार हैं।",
     labelAddress: "पता",
-    labelPhone:   "फ़ोन",
-    labelHours:   "दुकान का समय",
-    hoursLine1:   "सोमवार – रविवार",
-    hoursLine2:   "सुबह 8:00 – रात 8:00",
+    labelPhone: "फ़ोन",
+    labelHours: "दुकान का समय",
+    hoursLine1: "सोमवार – रविवार",
+    hoursLine2: "सुबह 8:00 – रात 8:00",
 
-    footerDesc:   "गुंगुनिया, ओडिशा का आपका विश्वसनीय किराना स्टोर। 2013 से ताज़ा किराना और थोक सुविधा।",
-    footerHours:  "रोज़ खुला: सुबह 8:00 – रात 8:00",
-    footerCopy:   "© 2026 मनोज किराना स्टोर। सर्वाधिकार सुरक्षित।",
+    footerDesc: "गुंगुनिया, ओडिशा का आपका विश्वसनीय किराना स्टोर। 2013 से ताज़ा किराना और थोक सुविधा।",
+    footerHours: "रोज़ खुला: सुबह 8:00 – रात 8:00",
+    footerCopy: "© 2026 मनोज किराना स्टोर। सर्वाधिकार सुरक्षित।",
     footerMadeIn: "गुंगुनिया, ओडिशा में ♥ के साथ बनाया",
   },
 };
@@ -378,7 +378,7 @@ const TRANSLATIONS = {
 ──────────────────────────────────────────── */
 const State = {
   theme: 'light',
-  lang:  'en',
+  lang: 'en',
 };
 
 /* ─────────────────────────────────────────
@@ -496,7 +496,7 @@ const I18n = {
    5. STORE STATUS (OPEN/CLOSED)
 ──────────────────────────────────────────── */
 const StoreStatus = {
-  OPEN_HOUR:  8,   // 8:00 AM
+  OPEN_HOUR: 8,   // 8:00 AM
   CLOSE_HOUR: 20,  // 8:00 PM
 
   isOpen() {
@@ -506,9 +506,9 @@ const StoreStatus = {
   },
 
   update() {
-    const open    = this.isOpen();
-    const dotEl   = document.getElementById('statusDot');
-    const textEl  = document.getElementById('statusText');
+    const open = this.isOpen();
+    const dotEl = document.getElementById('statusDot');
+    const textEl = document.getElementById('statusText');
     const badgeEl = document.getElementById('statusBadge');
 
     if (!dotEl || !textEl) return;
@@ -531,24 +531,24 @@ const StoreStatus = {
    6. NAVIGATION
 ──────────────────────────────────────────── */
 const Nav = {
-  header:       null,
-  hamburger:    null,
-  mobileMenu:   null,
-  menuClose:    null,
+  header: null,
+  hamburger: null,
+  mobileMenu: null,
+  menuClose: null,
   menuBackdrop: null,
-  navLinks:     null,
-  isOpen:       false,
+  navLinks: null,
+  isOpen: false,
 
   init() {
-    this.header       = document.getElementById('header');
-    this.hamburger    = document.getElementById('hamburger');
-    this.mobileMenu   = document.getElementById('mobileMenu');
-    this.menuClose    = document.getElementById('menuClose');
+    this.header = document.getElementById('header');
+    this.hamburger = document.getElementById('hamburger');
+    this.mobileMenu = document.getElementById('mobileMenu');
+    this.menuClose = document.getElementById('menuClose');
     this.menuBackdrop = document.getElementById('menuBackdrop');
-    this.navLinks     = document.querySelectorAll('.nav__link');
+    this.navLinks = document.querySelectorAll('.nav__link');
 
     this.hamburger?.addEventListener('click', () => this.open());
-    this.menuClose?.addEventListener('click',    () => this.close());
+    this.menuClose?.addEventListener('click', () => this.close());
     this.menuBackdrop?.addEventListener('click', () => this.close());
 
     // Close menu when a mobile link is clicked
