@@ -1,5 +1,8 @@
 # 🏪 Manoj Kirana Store – Official Website
 
+![Website Preview](assets/screenshots/hero.png)
+
+
 ![Mobile First](https://img.shields.io/badge/Design-Mobile--First-blue)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen)
 ![Languages](https://img.shields.io/badge/Languages-English%20%7C%20Odia-orange)
