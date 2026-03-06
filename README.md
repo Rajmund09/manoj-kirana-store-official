@@ -1,13 +1,29 @@
 # 🏪 Manoj Kirana Store – Official Website
 
-![Website Preview](assets/screenshots/hero.png)
-
-
 ![Mobile First](https://img.shields.io/badge/Design-Mobile--First-blue)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-brightgreen)
 ![Languages](https://img.shields.io/badge/Languages-English%20%7C%20Odia-orange)
 ![Built With](https://img.shields.io/badge/Built%20With-HTML%20CSS%20JS-yellow)
 ![Status](https://img.shields.io/badge/Status-Live-success)
+
+
+![Website Preview](assets/screenshots/hero.png)
+
+
+# 📸 Website Preview
+
+### Desktop View
+
+![Desktop Preview](assets/screenshots/hero.png)
+
+### Mobile View
+
+![Mobile Preview](assets/screenshots/mobile.png)
+
+### Products Section
+
+![Products](assets/screenshots/products.png)
+
 
 A modern **mobile-first bilingual website** built for **Manoj Kirana Store**, a trusted local grocery shop serving the community of **Gungunia, Odisha** since **2013**.
 
